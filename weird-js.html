@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" type="images/x-ico" href="https://cdn.iconscout.com/icon/free/png-256/javascript-23-1174949.png" />
+  <title>Weird JS</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style>
+    body {
+      background-color: white;
+    }
+
+    .img {
+      height: 300px !important;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row mt-3">
+      <div class="col-md-12">
+        <h1># The Weird Parts of JavaScript</h1>
+        <img src="https://i.ytimg.com/vi/LYFTGQuwlh8/maxresdefault.jpg" class="img img-thumbnail mt-4">
+      </div>
+      <div class="col-md-12 mt-5 text-justify">
+        <p>We all know that JavaScript is quite a funny language with tricky parts. Some of them can quickly turn our
+          everyday job into hell, and some of them can make us laugh out loud. Here, I am going to make collection of
+          some javascript weird problems &amp; questions. Which you even can't think about.</p>
+      </div>
+      <div class="col-md-12 mt-5">
+        <table class="table table-hover table-striped">
+          <thead>
+            <tr>
+              <th>Sr. No.</th>
+              <th>Question</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1.</td>
+              <td>
+                <div class="row text-left">
+                  <div class="col-md-4">console.log([ ] === [ ]);</div>
+                  <div class="col-md-3">OR</div>
+                  <div class="col-md-5">console.log([ ] == [ ]);</div>
+                  <div class="col-md-12 text-right">returns <b>FALSE</b>.</div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>2.</td>
+              <td>
+                <div class="row text-left">
+                  <div class="col-md-12">
+                    let a = {'name' : 'Shivam'}<br />
+                    let b = a;<br />
+                    b.name = 'Sam';<br />
+                    console.log(a.name);
+                  </div>
+                  <div class="col-md-12 text-right">Guess Output : <b>Sam or Shivam?</b></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>3. </td>
+              <td>
+                <div class="row text-left">
+                  <div class="col-md-4">typeof <b>undefined</b>;</div>
+                  <div class="col-md-3">OR</div>
+                  <div class="col-md-5">typeof(<b>undefined</b>);</div>
+                  <div class="col-md-12 text-right">Output : <b>undefined</b>.</div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>4. </td>
+              <td>
+                <div class="row text-left">
+                  <div class="col-md-4">typeof <b>null</b>;</div>
+                  <div class="col-md-3">OR</div>
+                  <div class="col-md-5">typeof(<b>null</b>);</div>
+                  <div class="col-md-12 text-right">Output : <b>object</b>.</div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>5. </td>
+              <td>
+                <div class="row text-left">
+                  <div class="col-md-4">typeof <b>String</b>;</div>
+                  <div class="col-md-3">OR</div>
+                  <div class="col-md-5">typeof(<b>String</b>);</div>
+                  <hr />
+                  <div class="col-md-4">typeof <b>Number</b>;</div>
+                  <div class="col-md-3">OR</div>
+                  <div class="col-md-5">typeof(<b>Number</b>);</div>
+                  <hr />
+                  <div class="col-md-4">typeof <b>Object</b>;</div>
+                  <div class="col-md-3">OR</div>
+                  <div class="col-md-5">typeof(<b>Object</b>);</div>
+                  <hr />
+                  <div class="col-md-4">typeof <b>Function</b>;</div>
+                  <div class="col-md-3">OR</div>
+                  <div class="col-md-5">typeof(<b>Function</b>);</div>
+                  <hr />
+                  <div class="col-md-4">typeof <b>Boolean</b>;</div>
+                  <div class="col-md-3">OR</div>
+                  <div class="col-md-5">typeof(<b>Boolean</b>);</div>
+                  <hr />
+                  <div class="col-md-12 text-right">Output : <b>Function</b>.</div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>6. </td>
+              <td>
+                <div class="row text-left">
+                  <div class="col-md-6"> ['1', '7', '11'].map(parseInt); </div>
+                  <div class="col-md-6 text-right">Can you guess the <b>Output</b>?</div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>7. </td>
+              <td>
+                <div class="row text-left">
+                  <div class="col-md-6">console.log(0.2 + 0.1 === 0.3);</div>
+                  <div class="col-md-6 text-right">Can you guess the <b>Output</b>?</div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>8. </td>
+              <td>
+                <div class="row text-left">
+                  <div class="col-md-6">console.log(Math.max() > Math.min());</div>
+                  <div class="col-md-6 text-right">Output : <b>True</b> or <b>False</b>?</div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>9. </td>
+              <td>
+                <div class="row text-left">
+                  <div class="col-md-6">console.log(018 - 017);</div>
+                  <div class="col-md-6 text-right">Can you guess the <b>Output</b>?</div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>10. </td>
+              <td>
+                <div class="row text-left">
+                  <div class="col-md-6">Have you ever hear about the <b>"Bang Bang Operator" (!!)</b> in JS?</div>
+                  <div class="col-md-6 text-right">
+                    <a href="https://medium.com/better-programming/javascript-bang-bang-i-shot-you-down-use-of-double-bangs-in-javascript-7c9d94446054"
+                      target="_blank">Answer</a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>11. </td>
+              <td>
+                <div class="row text-left">
+                  <div class="col-md-12"><b><i>Write a JS function to take any number of Arguments.</b></i></div>
+                  <div class="col-md-12 mt-3">
+                    function add(...args) {<br />
+                    &nbsp;&nbsp;let result = 0;<br />
+                    &nbsp;&nbsp;for (let arg of args)<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;result += arg;<br />
+                    &nbsp;&nbsp;console.log(result);<br />
+                    }<br />
+                    add(1) // returns 1<br />
+                    add(1,2) // returns 3<br />
+                    add(1, 2, 3, 4, 5) // returns 15<br />
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>12. </td>
+              <td>
+                <div class="row text-left">
+                  <div class="col-md-12">What are Spread Operators?</div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
