@@ -78,23 +78,51 @@ $(window).on('load', function () {
   if ($().circleProgress) {
     //Set progress circle 1
     $('#progress1').circleProgress({
-      value: 0.6,
-      size: 175,
-      thickness: 2,
-      fill: '#40424a',
-      emptyFill: 'rgba(0, 0, 0, 0)',
-    });
-    //Set progress circle 2
-    $('#progress2').circleProgress({
-      value: 0.5,
+      value: 0.85,
       size: 175,
       thickness: 2,
       fill: '#40424a',
       emptyFill: 'rgba(0, 0, 0, 0)',
     });
 
-    //Set progress circle white
+    //Set progress circle 2
+    $('#progress2').circleProgress({
+      value: 0.60,
+      size: 175,
+      thickness: 2,
+      fill: '#40424a',
+      emptyFill: 'rgba(0, 0, 0, 0)',
+    });
+
+    //Set progress circle 3
     $('#progress3').circleProgress({
+      value: 0.35,
+      size: 175,
+      thickness: 2,
+      fill: '#40424a',
+      emptyFill: 'rgba(0, 0, 0, 0)',
+    });
+
+    //Set progress circle 4
+    $('#progress4').circleProgress({
+      value: 0.70,
+      size: 175,
+      thickness: 2,
+      fill: '#40424a',
+      emptyFill: 'rgba(0, 0, 0, 0)',
+    });
+
+    //Set progress circle 5
+    $('#progress5').circleProgress({
+      value: 0.50,
+      size: 175,
+      thickness: 2,
+      fill: '#40424a',
+      emptyFill: 'rgba(0, 0, 0, 0)',
+    });
+
+    //Set progress circle 6
+    $('#progress6').circleProgress({
       value: 0.30,
       size: 175,
       thickness: 2,
@@ -102,31 +130,13 @@ $(window).on('load', function () {
       emptyFill: 'rgba(0, 0, 0, 0)',
     });
 
-    //Set progress circle white
-    $('#progress4').circleProgress({
-      value: 0.83,
-      size: 175,
-      thickness: 2,
-      fill: '#ffffff',
-      emptyFill: 'rgba(0, 0, 0, 0)',
-    });
-
-    //Set progress circle skyblue
-    $('#progress5').circleProgress({
+    //Set progress circle 6
+    $('#progress7').circleProgress({
       value: 0.75,
       size: 175,
       thickness: 2,
-      fill: '#009fff',
+      fill: '#40424a',
       emptyFill: 'rgba(0, 0, 0, 0)',
-    });
-
-    //Set progress circle skyblue
-    $('#progress6').circleProgress({
-      value: 0.83,
-      size: 175,
-      thickness: 2,
-      fill: '#009fff',
-      emptyFill: 'rgba(0, 0, 0, 0)',
-    });
+    });    
   }
 })(jQuery);
