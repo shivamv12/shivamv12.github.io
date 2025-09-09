@@ -590,12 +590,22 @@ ol {
   padding: 0 60px;
 }
 
+.portfolio-item {
+  margin-bottom: 30px;
+}
+
 .portfolio-item h2 {
   font-size: 24px;
   margin-bottom: 5px;
 }
 
 .portfolio-item p {
+  font-size: 14px;
+  margin-top: -20px;
+  margin-bottom: 0;
+}
+
+.portfolio-item span {
   font-size: 14px;
   margin-bottom: 0;
 }
