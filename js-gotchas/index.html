@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" type="images/x-ico"
+    href="https://freepngimg.com/download/ibm/74946-website-development-strongloop-programming-node.js-application-interface.png" />
+  <title>JavaScript Gotchas</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="mb-4 text-left"># JavaScript Gotchas</h1>
+    <img alt="JS-banner" src="banner.bin" class="img mb-4">
+
+    <!-- Question 1 -->
+    <div class="question-section">
+      <h4>: Array Equality</h4>
+      <pre>console.log([] === []);  
+console.log([] == []);</pre>
+      <div class="answer">
+        Both return <b>false</b>. In JavaScript, arrays are reference types. Two separate array objects are never
+        equal, even if they have the same elements.
+      </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="question-section">
+      <h4>: Object Reference</h4>
+      <pre>
+let a = { 'name': 'Shivam' };
+let b = a;
+b.name = 'Sam';
+console.log(a.name);
+      </pre>
+      <div class="answer">
+        Output: <b>Sam</b>. Objects are assigned by reference. Changing <code>b.name</code> also changes
+        <code>a.name</code>.
+      </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="question-section">
+      <h4>: Typeof Undefined</h4>
+      <pre>typeof undefined;
+typeof(undefined);</pre>
+      <div class="answer">
+        Both return <b>"undefined"</b>.
+      </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="question-section">
+      <h4>: Typeof Null</h4>
+      <pre>typeof null;
+typeof(null);</pre>
+      <div class="answer">
+        Returns <b>"object"</b>. This is a historical bug in JavaScript.
+      </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="question-section">
+      <h4>: Typeof Built-in Constructors</h4>
+      <pre>
+typeof String;   // "function"
+typeof Number;   // "function"
+typeof Object;   // "function"
+typeof Function; // "function"
+typeof Boolean;  // "function"
+      </pre>
+      <div class="answer">
+        Built-in constructors like <code>String</code>, <code>Number</code>, and <code>Boolean</code> are functions.
+      </div>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="question-section">
+      <h4>: Map + parseInt</h4>
+      <pre>['1', '7', '11'].map(parseInt);</pre>
+      <div class="answer">
+        Output: <b>[1, NaN, 3]</b>. Because <code>parseInt</code> receives two arguments (value, index), and radix
+        mismatches occur.
+      </div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="question-section">
+      <h4>: Floating Point Precision</h4>
+      <pre>console.log(0.2 + 0.1 === 0.3);</pre>
+      <div class="answer">
+        Output: <b>false</b>. Floating-point arithmetic is not exact in JavaScript.
+      </div>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="question-section">
+      <h4>: Math Max vs Min</h4>
+      <pre>console.log(Math.max() > Math.min());</pre>
+      <div class="answer">
+        Output: <b>false</b>. <code>Math.max()</code> returns -Infinity, <code>Math.min()</code> returns Infinity.
+      </div>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="question-section">
+      <h4>: Octal Numbers</h4>
+      <pre>console.log(018 - 017);</pre>
+      <div class="answer">
+        Output: <b>1</b> in modern JavaScript engines, but older versions may throw a syntax error. Leading 0
+        denotes octal in legacy JS.
+      </div>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="question-section">
+      <h4>: Bang Bang Operator (!!)</h4>
+      <pre>console.log(!!""); 
+console.log(!!"Hello");</pre>
+      <div class="answer">
+        Converts any value to its Boolean equivalent. <code>!!""</code> is <b>false</b>, <code>!!"Hello"</code> is
+        <b>true</b>.
+      </div>
+    </div>
+
+    <!-- Question 11 -->
+    <div class="question-section">
+      <h4>: Rest Parameters</h4>
+      <pre>
+function add(...args) {
+  let result = 0;
+  for (let arg of args) result += arg;
+  console.log(result);
+}
+add(1)           // 1
+add(1, 2)        // 3
+add(1, 2, 3, 4)  // 10
+      </pre>
+      <div class="answer">
+        Rest parameters allow a function to accept any number of arguments as an array.
+      </div>
+    </div>
+
+    <!-- Question 12 -->
+    <div class="question-section">
+      <h4>: Spread Operator</h4>
+      <pre>
+const arr1 = [1, 2, 3];
+const arr2 = [...arr1, 4, 5];
+console.log(arr2); // [1,2,3,4,5]
+      </pre>
+      <div class="answer">
+        Spread operator expands elements of an array/object.
+      </div>
+    </div>
+
+    <!-- Question 13 -->
+    <div class="question-section">
+      <h4>: Automatic Semicolon Insertion</h4>
+      <pre>
+return
+{
+  name: "Shivam"
+}
+      </pre>
+      <div class="answer">
+        Output: <b>undefined</b>. JS automatically inserts a semicolon after <code>return</code>, breaking the code.
+      </div>
+    </div>
+
+    <!-- Question 14 -->
+    <div class="question-section">
+      <h4>: NaN is not NaN?</h4>
+      <pre>console.log(NaN === NaN);</pre>
+      <div class="answer">
+        Output: <b>false</b>. NaN is the only value in JS that is not equal to itself.
+      </div>
+    </div>
+
+    <!-- Question 15 -->
+    <div class="question-section">
+      <h4>: `this` in Different Contexts</h4>
+      <pre>
+console.log(this);
+function foo() {
+  console.log(this);
+}
+foo();
+  </pre>
+      <div class="answer">
+        In the global scope, <code>this</code> refers to the global object (<code>window</code> in browsers). Inside a
+        normal function, <code>this</code> also refers to the global object (unless in strict mode, then it's
+        <b>undefined</b>). Arrow functions don't have their own <code>this</code>.
+      </div>
+    </div>
+
+    <!-- Question 16 -->
+    <div class="question-section">
+      <h4>: Hoisting</h4>
+      <pre>
+console.log(a);
+var a = 10;
+  </pre>
+      <div class="answer">
+        Output: <b>undefined</b>. Variables declared with <code>var</code> are hoisted but not initialized.
+        <code>let</code> and <code>const</code> are hoisted but cannot be accessed before declaration (Temporal Dead
+        Zone).
+      </div>
+    </div>
+
+    <!-- Question 17 -->
+    <div class="question-section">
+      <h4>: Function Hoisting</h4>
+      <pre>
+foo();
+function foo() {
+  console.log("Hello");
+}
+  </pre>
+      <div class="answer">
+        Output: <b>Hello</b>. Function declarations are hoisted entirely, so you can call them before definition.
+      </div>
+    </div>
+
+    <!-- Question 18 -->
+    <div class="question-section">
+      <h4>: Closure in Loops</h4>
+      <pre>
+for (var i = 0; i &lt; 3; i++) {
+  setTimeout(() =&gt; console.log(i), 100);
+}
+  </pre>
+      <div class="answer">
+        Output: <b>3 3 3</b>. <code>var</code> is function-scoped. Use <code>let i</code> instead to get <b>0 1 2</b>.
+      </div>
+    </div>
+
+    <!-- Question 19 -->
+    <div class="question-section">
+      <h4>: Comparing Objects</h4>
+      <pre>
+console.log({} == {});
+console.log({} === {});
+  </pre>
+      <div class="answer">
+        Both return <b>false</b>. Objects are reference types. Two different objects are never equal, even with
+        identical content.
+      </div>
+    </div>
+
+    <!-- Question 20 -->
+    <div class="question-section">
+      <h4>: Type Coercion in Addition</h4>
+      <pre>
+console.log([] + []);
+console.log([] + {});
+console.log({} + []);
+  </pre>
+      <div class="answer">
+        - <code>[] + []</code> → ""
+        - <code>[] + {}</code> → "[object Object]"
+        - <code>{} + []</code> → 0 (depends on context)
+        JavaScript coerces objects/arrays to strings in addition operations.
+      </div>
+    </div>
+
+    <!-- Question 21 -->
+    <div class="question-section">
+      <h4>: Optional Chaining</h4>
+      <pre>
+const obj = {};
+console.log(obj?.user?.name);
+  </pre>
+      <div class="answer">
+        Output: <b>undefined</b>. Optional chaining prevents errors when accessing deeply nested properties that might
+        not exist.
+      </div>
+    </div>
+
+    <!-- Question 22 -->
+    <div class="question-section">
+      <h4>: Nullish Coalescing</h4>
+      <pre>
+const val = 0 ?? 5;
+console.log(val);
+  </pre>
+      <div class="answer">
+        Output: <b>0</b>. <code>??</code> only falls back to the right-hand side if the left is <code>null</code> or
+        <code>undefined</code>, unlike <code>||</code>.
+      </div>
+    </div>
+
+    <!-- Question 23 -->
+    <div class="question-section">
+      <h4>: Event Loop & setTimeout</h4>
+      <pre>
+console.log('Start');
+setTimeout(() =&gt; console.log('Timeout'), 0);
+console.log('End');
+  </pre>
+      <div class="answer">
+        Output:
+        Start
+        End
+        Timeout
+        Even with 0ms delay, <code>setTimeout</code> runs after the current call stack is empty because of the event
+        loop.
+      </div>
+    </div>
+
+    <!-- Question 24 -->
+    <div class="question-section">
+      <h4>: Event Loop – Promise after setTimeout</h4>
+      <pre>
+console.log('Start');
+
+setTimeout(() =&gt; console.log('Timeout'), 0);
+
+Promise.resolve().then(() =&gt; console.log('Promise'));
+
+console.log('End');
+  </pre>
+      <div class="answer">
+        Output:
+        Start
+        End
+        Promise
+        Timeout
+
+        Explanation:
+        - Synchronous code runs first.
+        - Promises go into the microtask queue, which executes **before the macrotask queue** (setTimeout).
+        - Hence, the <code>Promise</code> logs before <code>Timeout</code>.
+      </div>
+    </div>
+
+    <!-- Question 25 -->
+    <div class="question-section">
+      <h4>: Event Loop – Promise inside setTimeout</h4>
+      <pre>
+console.log('Start');
+
+setTimeout(() =&gt; {
+  console.log('Timeout');
+  Promise.resolve().then(() =&gt; console.log('Promise inside Timeout'));
+}, 0);
+
+console.log('End');
+  </pre>
+      <div class="answer">
+        Output:
+        Start
+        End
+        Timeout
+        Promise inside Timeout
+
+        Explanation:
+        - The <code>setTimeout</code> callback runs after the current call stack.
+        - Inside that callback, the Promise is a microtask, which executes **after the callback finishes**, so it logs
+        last.
+      </div>
+    </div>
+
+    <!-- Question 26 -->
+    <div class="question-section">
+      <h4>: Temporal Dead Zone (TDZ)</h4>
+      <pre>
+console.log(a); // ReferenceError
+let a = 10;
+
+{
+  console.log(b); // ReferenceError
+  const b = 5;
+}
+  </pre>
+      <div class="answer">
+        <b>What happens:</b><br>
+        - Variables declared with <code>let</code> or <code>const</code> are in the Temporal Dead Zone (TDZ)
+        from the start of their scope until their declaration is executed.<br>
+        - Accessing them before initialization throws a <b>ReferenceError</b>.<br><br>
+        <b>Why:</b> TDZ exists to prevent using variables before they are properly initialized, unlike
+        <code>var</code>, which is hoisted and initialized as <code>undefined</code>.<br><br>
+        <b>Tip:</b> Always declare <code>let</code> and <code>const</code> variables before using them.
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>&copy;
+      <script>document.write(new Date().getFullYear())</script> Shivam Verma. Built with ❤️
+    </p>
+  </footer>
+</body>
+
+</html>

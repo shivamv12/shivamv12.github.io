@@ -1,0 +1,79 @@
+/* === Dark Theme Styling === */
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1,
+h4,
+h3,
+h4 {
+  color: #00ffe0;
+}
+
+a {
+  color: #66d9ff;
+}
+
+a:hover {
+  color: #ff66c4;
+  text-decoration: none;
+}
+
+.img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #00ffe0;
+}
+
+.question-section {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border-left: 5px solid #00ffe0;
+}
+
+pre {
+  background-color: #2a2a2a;
+  padding: 10px;
+  border-radius: 5px;
+  color: #ffcb6b;
+  overflow-x: auto;
+}
+
+.answer {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #262626;
+  border-radius: 5px;
+  color: #a6e22e;
+}
+
+.container {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+hr {
+  border-top: 1px dashed #555;
+}
+
+/* Footer */
+footer {
+  background: #1a1c23;
+  color: #777;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  border-top: 1px solid #333;
+}
+
+footer a {
+  color: #ff4b2b;
+  text-decoration: none;
+}
