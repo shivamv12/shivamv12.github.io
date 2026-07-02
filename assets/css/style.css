@@ -110,7 +110,9 @@ h2.section-title::after {
 }
 
 .hero-text {
-  max-width: 600px;
+  /* max-width: 600px; */
+  flex: 1;
+  min-width: 300px;
 }
 
 .hero-text h2 {
