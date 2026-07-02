@@ -115,6 +115,11 @@ h2.section-title::after {
   min-width: 300px;
 }
 
+.details {
+  text-align: justify;
+  padding-right: 5em;
+}
+
 .hero-text h2 {
   font-size: 2.4rem;
   margin-bottom: 0.8rem;
@@ -350,6 +355,11 @@ footer a {
   header {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .details {
+    padding-right: 0;
+    text-align: left; /* Optional */
   }
 
   .hero {
