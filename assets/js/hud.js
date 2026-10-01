@@ -1,4 +1,3 @@
-// Robotic system voice
 // ---- Robotic system voice ----
 const speakSystemMessage = () => {
   if (!("speechSynthesis" in window)) return;
@@ -29,93 +28,77 @@ const speakSystemMessage = () => {
   speechSynthesis.speak(utterance);
 };
 
+
+// ---- Boot sequence ----
 (() => {
-  /* ---- Boot sequence (~3.5s, skippable, every page load) ---- */
   const root = document.documentElement;
-  const boot = document.getElementById('boot');
+  const boot = document.getElementById("boot");
+  if (!root.classList.contains("booting") || !boot) return;
 
-  if (root.classList.contains('booting') && boot) {
-    const log = document.getElementById('boot-log');
-    const lines = [
-      '> initialising portfolio…',
-      '> mounting modules: horse-watch · skreem · neuralens · rag',
-      '> loading interface systems…',
-      '> synchronising project telemetry…',
-      '> system online'
-    ];
+  const log = document.getElementById("boot-log");
+  const lines = [
+    "> initialising portfolio…",
+    "> mounting modules: horse-watch · skreem · neuralens · rag",
+    "> loading interface systems…",
+    "> synchronising project telemetry…",
+    "> system online"
+  ];
 
-    let i = 0, done = false, timer;
+  let i = 0;
+  let done = false;
+  let bootReady = false;
+  let speechStarted = false;
+  let timer;
 
-    const finish = () => {
-      if (done) return;
-      done = true;
-      clearInterval(timer);
-      removeEventListener('keydown', finish);
-      removeEventListener('pointerdown', finish);
-      boot.classList.add('is-done');
-      setTimeout(() => root.classList.remove('booting'), 500);
-    };
+  const finish = () => {
+    if (done) return;
 
-    timer = setInterval(() => {
-      if (i < lines.length) {
-        log.textContent += (i ? '\n' : '') + lines[i];
-    
-        // Speak when the final boot message appears
-        if (i === lines.length - 1) {
-          speakSystemMessage();
-        }
-    
-        i++;
-      } else {
-        finish();
+    done = true;
+    clearInterval(timer);
+
+    removeEventListener("keydown", handleBootInteraction);
+    removeEventListener("pointerdown", handleBootInteraction);
+
+    boot.classList.add("is-done");
+
+    setTimeout(() => {
+      root.classList.remove("booting");
+    }, 500);
+  };
+
+  const handleBootInteraction = () => {
+    // Don't allow interaction to skip the boot before
+    // the system has reached the ONLINE state.
+    if (!bootReady || speechStarted) return;
+
+    speechStarted = true;
+
+    speakSystemMessage();
+
+    finish();
+  };
+
+  timer = setInterval(() => {
+    if (i < lines.length) {
+      log.textContent += (i ? "\n" : "") + lines[i];
+
+      // Boot is now ready for real user interaction
+      if (i === lines.length - 1) {
+        bootReady = true;
+        boot.classList.add("is-ready");
       }
-    }, 600);
 
-    addEventListener('keydown', finish);
-    addEventListener('pointerdown', finish);
-    setTimeout(finish, 5000);
-  }
+      i++;
+    } else {
+      clearInterval(timer);
 
-  /* ---- Active nav link on scroll ---- */
-  const links = [...document.querySelectorAll('.site-nav__links a')];
-  const byId = new Map(links.map((a) => [a.getAttribute('href').slice(1), a]));
+      // Keep the boot screen waiting for the user's
+      // real interaction instead of automatically closing.
+    }
+  }, 600);
 
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach((e) => {
-      if (!e.isIntersecting) return;
-      links.forEach((l) => { l.classList.remove('is-active'); l.removeAttribute('aria-current'); });
-      const a = byId.get(e.target.id);
-      if (a) { a.classList.add('is-active'); a.setAttribute('aria-current', 'location'); }
-    });
-  }, { rootMargin: '-45% 0px -50% 0px' });
+  // Real user gestures — required by browser autoplay policy
+  addEventListener("keydown", handleBootInteraction);
+  addEventListener("pointerdown", handleBootInteraction);
 
-  byId.forEach((_, id) => { const el = document.getElementById(id); if (el) io.observe(el); });
-
-  /* ---- Ambient HUD telemetry / subtle pointer parallax ---- */
-  const telemetry = document.querySelector('.hud-ambient__telemetry');
-  const orbOne = document.querySelector('.hud-ambient__orb--one');
-  const orbTwo = document.querySelector('.hud-ambient__orb--two');
-
-  if (telemetry) {
-    const messages = [
-      'SYS // NODE ONLINE · SIGNAL STABLE',
-      'SYS // PORTFOLIO LINK · ACTIVE',
-      'SYS // ARCHITECTURE MODE · READY',
-      'SYS // 8Y EXPERIENCE · INDEXED'
-    ];
-    let messageIndex = 0;
-    setInterval(() => {
-      messageIndex = (messageIndex + 1) % messages.length;
-      telemetry.textContent = messages[messageIndex];
-    }, 4200);
-  }
-
-  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    addEventListener('pointermove', (event) => {
-      const x = (event.clientX / innerWidth - 0.5) * 2;
-      const y = (event.clientY / innerHeight - 0.5) * 2;
-      if (orbOne) orbOne.style.margin = `${y * 5}px ${x * 5}px`;
-      if (orbTwo) orbTwo.style.margin = `${y * -3}px ${x * -3}px`;
-    }, { passive: true });
-  }
 })();
