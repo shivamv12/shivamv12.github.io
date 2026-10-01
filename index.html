@@ -15,7 +15,7 @@
 
   <header>
     <h1>Shivam Verma</h1>
-    <a href="assets/docs/shivam-verma-fullstack.pdf" class="btn" target="_blank">Download Resume</a>
+    <a href="assets/docs/shivam-verma-resume.pdf" class="btn" target="_blank">Download Resume</a>
   </header>
 
   <section class="hero">
@@ -35,6 +35,30 @@
   <section>
     <h2 class="section-title">[Work Experience]</h2>
 
+    <!-- Incubit -->
+    <div class="company-block">
+      <div class="company-header">
+        <h3>Incubit</h3>
+        <span>Bangalore | Hybrid</span>
+      </div>
+
+      <div class="timeline">
+        <div class="role">
+          <span class="dot"></span>
+          <div class="details">
+            <h4>Senior Software Engineer</h4>
+            <span>Sept 2026 – Present</span>
+            <span class="client-tag">Client: Anko GCC · Kmart Australia</span>
+            <ul>
+              <li>Contributing to full-stack engineering initiatives for Kmart Australia through Anko GCC.</li>
+              <li>Building and maintaining features across the stack with JavaScript, TypeScript, React, Node.js, PostgreSQL and Kafka.</li>
+              <!-- Add specifics (features, ownership, impact) as they land -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Haptiq Labs -->
     <div class="company-block">
       <div class="company-header">
@@ -47,7 +71,7 @@
           <span class="dot"></span>
           <div class="details">
             <h4>Senior Software Engineer | Team Lead</h4>
-            <span>Jan 2025 – Present</span>
+            <span>Jan 2025 – Jul 2026</span>
             <ul>
               <li>Promoted to Team Lead and led a cross-functional team of 7 engineers across frontend, backend, and UI disciplines, driving sprint planning, technical grooming, release management, and hiring activities.</li>
               <li>Architected and delivered Horse Watch, an app-agnostic micro frontend platform enabling runtime integration, API contracts, and independent deployments across React and legacy web applications.</li>
@@ -94,7 +118,8 @@
           <span class="dot"></span>
           <div class="details">
             <h4>Software Consultant</h4>
-            <span>Oct 2021 – Apr 2023 | Client: <b>Ather Energy</b> </span>
+            <span>Oct 2021 – Apr 2023</span>
+            <span class="client-tag">Client: Ather Energy</span>
             <ul>
               <li>Designed and developed scalable backend REST APIs using Node.js and Express.js for customer-facing applications at Ather Energy.</li>
               <li>Built and maintained backend services following layered architecture principles, focusing on clean business logic separation, maintainability, and performance.</li>
@@ -246,98 +271,232 @@
     </div>
   </section>
 
-  <section>
+  <section id="portfolio">
     <h2 class="section-title">{ Portfolio }</h2>
+
     <div class="projects">
+      <!-- 1. Horse Watch -->
       <div class="project">
-        <img src="assets/images/portfolio/15.jpeg" alt="NeuraLens">
+        <img src="assets/images/portfolio/horse-watch.png" alt="Horse Watch widget" loading="lazy">
+        <div class="content">
+          <h3>Horse Watch</h3>
+          <p>Cross-app micro-frontend widget for Daily Racing Form. ~70K of ~100K monthly users opened it in month one.
+            <a href="https://www.drf.com" target="_blank" rel="noopener noreferrer">View live</a><br />
+            <span class="note">*Company project: Haptiq</span>
+          </p>
+          <button type="button" class="case-btn" data-case="cs-horse-watch" aria-haspopup="dialog">Case study <span aria-hidden="true">→</span></button>
+        </div>
+      </div>
+
+      <!-- 2. Skreem -->
+      <div class="project">
+        <img src="assets/images/portfolio/Skreem-portal.png" alt="Skreem influencer marketing platform" loading="lazy">
+        <div class="content">
+          <h3>Skreem</h3>
+          <p>Brand and influencer collaboration portal. ~50K influencers, ~3K brands. No longer live.<br />
+            <span class="note">*Company project: Skreem</span>
+          </p>
+          <button type="button" class="case-btn" data-case="cs-skreem" aria-haspopup="dialog">Case study <span aria-hidden="true">→</span></button>
+        </div>
+      </div>
+
+      <!-- 3. NeuraLens -->
+      <div class="project">
+        <img src="assets/images/portfolio/Neura-lens.jpeg" alt="NeuraLens" loading="lazy">
         <div class="content">
           <h3>NeuraLens</h3>
-          <p>AI-powered object detection app in React Native & NestJS. <a href="https://github.com/shivamv12/neura-lens"
-              target="_blank">View Project</a></p>
+          <p>Self-directed LLM image-analysis app in React Native &amp; NestJS.
+            <a href="https://github.com/shivamv12/neura-lens" target="_blank" rel="noopener noreferrer">App</a> ·
+            <a href="https://github.com/shivamv12/neura-lens-server" target="_blank" rel="noopener noreferrer">Server</a>
+          </p>
+          <button type="button" class="case-btn" data-case="cs-neuralens" aria-haspopup="dialog">Case study <span aria-hidden="true">→</span></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="projects">
+      <!-- 4. RAG Pipeline Visualizer -->
+      <div class="project">
+        <img src="assets/images/portfolio/RAG-pipeline.png" alt="RAG Pipeline Visualizer" loading="lazy">
+        <div class="content">
+          <h3>RAG Pipeline Visualizer</h3>
+          <p>Self-directed RAG pipeline over the Express.js docs that exposes every stage.
+            <a href="https://lnkd.in/p/gxAnNeYj" target="_blank" rel="noopener noreferrer">Read the write-up</a>
+          </p>
+          <!-- TODO: add repo link here -->
+          <button type="button" class="case-btn" data-case="cs-rag" aria-haspopup="dialog">Case study <span aria-hidden="true">→</span></button>
         </div>
       </div>
 
+      <!-- Newbie -->
       <div class="project">
-        <img src="assets/images/portfolio/12.png" alt="Newbie Horse Racing">
+        <img src="assets/images/portfolio/Newbie.png" alt="Newbie Horse Racing" loading="lazy">
         <div class="content">
           <h3>Newbie Horse Racing</h3>
-          <p>Mobile-first racing web app, <a href="https://newbie.drf.com" target="_blank">View Project</a><br /><span
-              style="font-size:10px;">*Company project:
-              Haptiq</span></p>
-        </div>
-      </div>
-
-
-
-      <div class="project">
-        <img src="assets/images/portfolio/11.png" alt="Influencer Marketing">
-        <div class="content">
-          <h3>Influencer Marketing</h3>
-          <p>Brand collaboration platform, <a href="#" target="_blank">View
-              Project</a><br /><span style="font-size:10px;">*Company project: Skreem</span></p>
-        </div>
-      </div>
-
-    </div>
-    <div class="projects">
-
-      <div class="project">
-        <img src="assets/images/portfolio/9.png" alt="RaspadoGit">
-        <div class="content">
-          <h3>RaspadoGit</h3>
-          <p>Github API integration in Angular. <a href="https://github.com/shivamv12/raspadogit" target="_blank">View
-              Project</a></p>
-
-        </div>
-      </div>
-
-      <div class="project">
-        <img src="assets/images/portfolio/4.jpg" alt="WeTubeVids">
-        <div class="content">
-          <h3>WeTubeVids</h3>
-          <p>Youtube API integration in Core PHP. <a href="https://github.com/shivamv12/wetubevids" target="_blank">View
-              Project</a></p>
-        </div>
-      </div>
-
-      <div class="project">
-        <img src="assets/images/portfolio/8.jpg" alt="TrainFinder">
-        <div class="content">
-          <h3>TrainFinder</h3>
-          <p>Indian Railway API integration in Laravel. <a href="https://github.com/shivamv12/trainfinder"
-              target="_blank">View Project</a></p>
+          <p>Satellite web app that brings a younger audience into DRF. ~10K sign-ups during Breeders' Cup 2025.
+            <a href="https://newbie.drf.com" target="_blank" rel="noopener noreferrer">View live</a><br />
+            <span class="note">*Company project: Haptiq</span>
+          </p>
+          <button type="button" class="case-btn" data-case="cs-newbie" aria-haspopup="dialog">Case study <span aria-hidden="true">→</span></button>
         </div>
       </div>
     </div>
-    <div class="projects">
-      <div class="project">
-        <img src="assets/images/portfolio/5.jpg" alt="MediSmart">
-        <div class="content">
-          <h3>MediSmart</h3>
-          <p>Desktop application using Java Swing. <a href="https://github.com/shivamv12/medismart" target="_blank">View
-              Project</a></p>
-        </div>
-      </div>
 
-      <div class="project">
-        <img src="assets/images/portfolio/13.png" alt="Voice Controlled Remote">
-        <div class="content">
-          <h3>Voice Controlled Remote</h3>
-          <p>JS Webkit speech recognition API. <a href="https://github.com/shivamv12/nodejs-speech-recognition"
-              target="_blank">View Project</a></p>
-        </div>
-      </div>
-
-      <div class="project">
-        <img src="assets/images/portfolio/14.jpg" alt="Highway Riders">
-        <div class="content">
-          <h3>Highway Riders</h3>
-          <p>C++ graphics road rage game. <a href="https://github.com/shivamv12/highway-riders-car-race"
-              target="_blank">View Project</a></p>
-        </div>
-      </div>
+    <!-- Earlier projects -->
+    <div class="earlier">
+      <h3>Earlier projects</h3>
+      <ul>
+        <li>
+          <button type="button" class="thumb" data-img="assets/images/portfolio/9.png" data-title="RaspadoGit" data-desc="GitHub API integration in Angular" data-repo="https://github.com/shivamv12/raspadogit" aria-label="Preview RaspadoGit">
+            <img src="assets/images/portfolio/9.png" alt="" loading="lazy">
+          </button>
+          <div>
+            <a href="https://github.com/shivamv12/raspadogit" target="_blank" rel="noopener noreferrer">RaspadoGit</a>
+            <span>GitHub API integration in Angular</span>
+          </div>
+        </li>
+        <li>
+          <button type="button" class="thumb" data-img="assets/images/portfolio/4.jpg" data-title="WeTubeVids" data-desc="YouTube API integration in Core PHP" data-repo="https://github.com/shivamv12/wetubevids" aria-label="Preview WeTubeVids">
+            <img src="assets/images/portfolio/4.jpg" alt="" loading="lazy">
+          </button>
+          <div>
+            <a href="https://github.com/shivamv12/wetubevids" target="_blank" rel="noopener noreferrer">WeTubeVids</a>
+            <span>YouTube API integration in Core PHP</span>
+          </div>
+        </li>
+        <li>
+          <button type="button" class="thumb" data-img="assets/images/portfolio/8.jpg" data-title="TrainFinder" data-desc="Indian Railway API integration in Laravel" data-repo="https://github.com/shivamv12/trainfinder" aria-label="Preview TrainFinder">
+            <img src="assets/images/portfolio/8.jpg" alt="" loading="lazy">
+          </button>
+          <div>
+            <a href="https://github.com/shivamv12/trainfinder" target="_blank" rel="noopener noreferrer">TrainFinder</a>
+            <span>Indian Railway API integration in Laravel</span>
+          </div>
+        </li>
+        <li>
+          <button type="button" class="thumb" data-img="assets/images/portfolio/5.jpg" data-title="MediSmart" data-desc="Desktop application using Java Swing" data-repo="https://github.com/shivamv12/medismart" aria-label="Preview MediSmart">
+            <img src="assets/images/portfolio/5.jpg" alt="" loading="lazy">
+          </button>
+          <div>
+            <a href="https://github.com/shivamv12/medismart" target="_blank" rel="noopener noreferrer">MediSmart</a>
+            <span>Desktop application using Java Swing</span>
+          </div>
+        </li>
+        <li>
+          <button type="button" class="thumb" data-img="assets/images/portfolio/13.png" data-title="Voice Controlled Remote" data-desc="JS WebKit speech recognition API" data-repo="https://github.com/shivamv12/nodejs-speech-recognition" aria-label="Preview Voice Controlled Remote">
+            <img src="assets/images/portfolio/13.png" alt="" loading="lazy">
+          </button>
+          <div>
+            <a href="https://github.com/shivamv12/nodejs-speech-recognition" target="_blank" rel="noopener noreferrer">Voice Controlled Remote</a>
+            <span>JS WebKit speech recognition API</span>
+          </div>
+        </li>
+        <li>
+          <button type="button" class="thumb" data-img="assets/images/portfolio/14.jpg" data-title="Highway Riders" data-desc="C++ graphics road-rage game" data-repo="https://github.com/shivamv12/highway-riders-car-race" aria-label="Preview Highway Riders">
+            <img src="assets/images/portfolio/14.jpg" alt="" loading="lazy">
+          </button>
+          <div>
+            <a href="https://github.com/shivamv12/highway-riders-car-race" target="_blank" rel="noopener noreferrer">Highway Riders</a>
+            <span>C++ graphics road-rage game</span>
+          </div>
+        </li>
+      </ul>
     </div>
+    
+    <!-- Shared image viewer (place next to the other dialogs) -->
+    <dialog id="image-viewer" class="case-modal image-viewer" aria-labelledby="iv-title">
+      <div class="case-modal__inner">
+        <button type="button" class="case-modal__close" aria-label="Close preview">&times;</button>
+        <h3 id="iv-title"></h3>
+        <p class="case-modal__meta" id="iv-desc"></p>
+        <img id="iv-img" alt="">
+        <a id="iv-repo" class="case-btn" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">→</span></a>
+      </div>
+    </dialog>
+
+    <!-- Case study modals -->
+    <dialog id="cs-horse-watch" class="case-modal" aria-labelledby="cs-horse-watch-title">
+      <div class="case-modal__inner">
+        <button type="button" class="case-modal__close" aria-label="Close case study">&times;</button>
+        <h3 id="cs-horse-watch-title">Horse Watch</h3>
+        <p class="case-modal__meta">Daily Racing Form · Company project: Haptiq</p>
+        <dl class="case-list">
+          <div><dt>Problem</dt><dd>DRF runs many small apps under one umbrella (SSTF, single site top of funnel) and wanted one widget across all of them.</dd></div>
+          <div><dt>Decision</dt><dd>A loader plus widget manager, injected into every app through GTM.</dd></div>
+          <div><dt>Rejected</dt><dd>Installing a package in each host app, which forced a production deployment of every app per change.</dd></div>
+          <div><dt>Delivery</dt><dd>Versioned loader files in S3, a copy in <code>/latest</code>, and GTM loads <code>/latest</code>.</dd></div>
+          <div><dt>Isolation</dt><dd>Shadow DOM with <code>HW-*</code> prefixed ids and classes.</dd></div>
+          <div><dt>Real-time</dt><dd>Leader election (Web Locks API + BroadcastChannel) shares one SSE connection across tabs, cutting backend connections from O(n) to O(1).</dd></div>
+          <div><dt>Outcome</dt><dd>Live at drf.com. ~70K of ~100K monthly users opened the widget in month one.</dd></div>
+          <div><dt>Trade-off</dt><dd>GTM injection adds a runtime dependency on the tag manager. Ad-blocker impact is unmeasured.</dd></div>
+          <div><dt>Stack</dt><dd>Shadow DOM, GTM, S3, SSE, Web Locks API, BroadcastChannel</dd></div>
+        </dl>
+      </div>
+    </dialog>
+
+    <dialog id="cs-skreem" class="case-modal" aria-labelledby="cs-skreem-title">
+      <div class="case-modal__inner">
+        <button type="button" class="case-modal__close" aria-label="Close case study">&times;</button>
+        <h3 id="cs-skreem-title">Skreem</h3>
+        <p class="case-modal__meta">Brand and influencer collaboration portal · Company project: Skreem</p>
+        <dl class="case-list">
+          <div><dt>Problem</dt><dd>Brands and influencers needed a dedicated place to manage collaborations. Instagram wasn't a practical tool for it.</dd></div>
+          <div><dt>Decision</dt><dd>Rewrote the platform from scratch in Node.js, replacing an older Rails app, as the team standardised on the MERN stack.</dd></div>
+          <!-- CONFIRM: scope of "rewrote" (whole platform or your modules) -->
+          <div><dt>Architecture</dt><dd>Event-driven backend with Redis-backed job queues (BullMQ) and Kafka.</dd></div>
+          <!-- CONFIRM: keep Kafka wording to your actual involvement -->
+          <div><dt>Scale</dt><dd>~50K influencers, ~3K brands. No longer live.</dd></div>
+          <div><dt>Stack</dt><dd>Node.js, Express, MongoDB, Redis, BullMQ, Kafka</dd></div>
+        </dl>
+      </div>
+    </dialog>
+
+    <dialog id="cs-neuralens" class="case-modal" aria-labelledby="cs-neuralens-title">
+      <div class="case-modal__inner">
+        <button type="button" class="case-modal__close" aria-label="Close case study">&times;</button>
+        <h3 id="cs-neuralens-title">NeuraLens</h3>
+        <p class="case-modal__meta">Self-directed project</p>
+        <dl class="case-list">
+          <div><dt>Goal</dt><dd>Learn LLM integration in React Native.</dd></div>
+          <div><dt>What it does</dt><dd>Capture or upload an image and get a structured analysis (overview, key objects, context) plus an explicit-content flag.</dd></div>
+          <div><dt>Decision</dt><dd>A structured prompt (Role, Task, Context, Rules, Reasoning, Stop condition, Output) returning strict JSON with an <code>explicitContent</code> field.</dd></div>
+          <div><dt>Trade-off</dt><dd>Prompt-based flagging means the same model analyzes and polices the image. A production system would add a dedicated moderation service.</dd></div>
+          <div><dt>Stack</dt><dd>React Native (Expo), NestJS, MongoDB, S3 pre-signed uploads, Llama 4 Maverick via OpenRouter</dd></div>
+        </dl>
+      </div>
+    </dialog>
+
+    <dialog id="cs-rag" class="case-modal" aria-labelledby="cs-rag-title">
+      <div class="case-modal__inner">
+        <button type="button" class="case-modal__close" aria-label="Close case study">&times;</button>
+        <h3 id="cs-rag-title">RAG Pipeline Visualizer</h3>
+        <p class="case-modal__meta">Self-directed project</p>
+        <dl class="case-list">
+          <div><dt>Stages exposed</dt><dd>Query embedding, retrieval with similarity scores, prompt construction, answer generation.</dd></div>
+          <div><dt>Finding</dt><dd>"Can I use Express behind nginx?" failed. The docs say "reverse proxy", so retrieval missed content that was in the corpus. The similarity threshold stopped the request instead of letting the LLM answer confidently.</dd></div>
+          <div><dt>Eval</dt><dd>Recall@3 harness comparing fixed-size and structure-aware chunking. Results so far are inconclusive.</dd></div>
+          <div><dt>Next</dt><dd>Hybrid search (BM25), re-ranking, MRR.</dd></div>
+          <div><dt>Stack</dt><dd>Node/Express, React, transformers.js (all-MiniLM-L6-v2), JSON vector store with cosine similarity, OpenRouter</dd></div>
+        </dl>
+      </div>
+    </dialog>
+
+    <dialog id="cs-newbie" class="case-modal" aria-labelledby="cs-newbie-title">
+      <div class="case-modal__inner">
+        <button type="button" class="case-modal__close" aria-label="Close case study">&times;</button>
+        <h3 id="cs-newbie-title">Newbie Horse Racing</h3>
+        <p class="case-modal__meta">Daily Racing Form · Company project: Haptiq</p>
+        <dl class="case-list">
+          <div><dt>Problem</dt><dd>DRF's core audience skews older, and younger people were less drawn to horse racing. DRF needed a way to reach them.</dd></div>
+          <div><dt>Role</dt><dd>Architect and hands-on engineer, designing the system with the tech manager and writing code.</dd></div>
+          <div><dt>Decision</dt><dd>Launch Newbie as a separate satellite product instead of redesigning the core site. It carries the same racing data and information with a simpler, friendlier UI/UX for Gen Z and first-timers.</dd></div>
+          <div><dt>Funnel</dt><dd>Newbie prompts sign-up and routes the traffic it attracts into core DRF, so it works as a top-of-funnel product.</dd></div>
+          <div><dt>Outcome</dt><dd>Almost 10K new users signed up through Newbie during the Breeders' Cup event (Oct–Nov 2025).</dd></div>
+          <div><dt>Stack</dt><dd>Preact frontend, Node.js backend-for-frontend (BFF)</dd></div>
+          <div><dt>Status</dt><dd>Live at <a href="https://newbie.drf.com" target="_blank" rel="noopener noreferrer">newbie.drf.com</a>.</dd></div>
+        </dl>
+      </div>
+    </dialog>
   </section>
 
   <section>
@@ -424,6 +583,46 @@
     }
   </script>
 
+  <script>
+    (() => {
+      document.querySelectorAll('[data-case]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const dlg = document.getElementById(btn.dataset.case);
+          if (!dlg) return;
+          dlg.showModal();
+          document.body.classList.add('modal-open');
+        });
+      });
+
+      document.querySelectorAll('dialog.case-modal').forEach((dlg) => {
+        dlg.querySelector('.case-modal__close').addEventListener('click', () => dlg.close());
+        dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); }); // backdrop click
+        dlg.addEventListener('close', () => document.body.classList.remove('modal-open'));
+      });
+    })();
+  </script>
+
+  <script>
+    (() => {
+      const dlg = document.getElementById('image-viewer');
+      const img = document.getElementById('iv-img');
+      const title = document.getElementById('iv-title');
+      const desc = document.getElementById('iv-desc');
+      const repo = document.getElementById('iv-repo');
+
+      document.querySelectorAll('.thumb').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          img.src = btn.dataset.img;
+          img.alt = btn.dataset.title + ' screenshot';
+          title.textContent = btn.dataset.title;
+          desc.textContent = btn.dataset.desc;
+          repo.href = btn.dataset.repo;
+          dlg.showModal();
+          document.body.classList.add('modal-open');
+        });
+      });
+    })();
+  </script>
 </body>
 
 </html>
