@@ -17,9 +17,9 @@
     href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E⚡%3C/text%3E%3C/svg%3E">
 
   <script>
-    /* show the boot sequence once per session, never with reduced motion */
+    /* show the boot sequence on every page load, except reduced-motion users */
     try {
-      if (!sessionStorage.getItem('booted') && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
         document.documentElement.classList.add('booting');
       }
     } catch (e) { }
@@ -37,6 +37,14 @@
 
 <body>
 
+  <div class="hud-ambient" aria-hidden="true">
+    <div class="hud-ambient__scan"></div>
+    <div class="hud-ambient__orb hud-ambient__orb--one"></div>
+    <div class="hud-ambient__orb hud-ambient__orb--two"></div>
+    <div class="hud-ambient__crosshair hud-ambient__crosshair--one"></div>
+    <div class="hud-ambient__crosshair hud-ambient__crosshair--two"></div>
+    <div class="hud-ambient__telemetry">SYS // 07.26 · NODE ONLINE · SIGNAL STABLE</div>
+  </div>
   <div id="boot" class="boot" aria-hidden="true">
     <pre id="boot-log"></pre>
     <span class="boot__skip">press any key to skip</span>
@@ -110,7 +118,7 @@
             </div>
           </dl>
           <ul class="stats">
-            <li><strong>8</strong><span>years</span></li>
+            <li><strong>~8 Yrs</strong><span> of experience in building software</span></li>
             <li><strong>~100K</strong><span>monthly users, Horse Watch</span></li>
             <li><strong>~10K</strong><span>sign-ups, Newbie 2025</span></li>
           </ul>
@@ -346,7 +354,7 @@
 
     <section>
       <h2 class="section-title">&lt;Tech Stack&gt;</h2>
-      <div class="projects">
+      <div class="projects tech-grid">
         <div class="project">
           <div class="content" style="text-align: justify;">
             <h4>AI Integration / Prompt Engineering</h4><br />
@@ -375,8 +383,7 @@
               patterns, and responsive user experiences.</p>
           </div>
         </div>
-      </div>
-      <div class="projects">
+
         <div class="project">
           <div class="content">
             <h4>NoSQL / MongoDB</h4><br />
@@ -822,13 +829,27 @@
   <div id="imageModal" class="modal">
     <span class="close">&times;</span>
     <img class="modal-content" id="modalImg">
+    <div class="modal-scan" aria-hidden="true"></div>
     <div id="caption"></div>
   </div>
 
   <footer>
-    <p>&copy;
-      <script>document.write(new Date().getFullYear())</script> Shivam Verma. Built with ❤️
-    </p>
+    <div class="footer-system">
+      <span class="footer-status">
+        <span class="status-dot"></span>
+        SYSTEM ONLINE
+      </span>
+  
+      <!-- <span class="footer-meta">BUILD 2026.09</span> -->
+    </div>
+  
+    <div class="footer-divider"></div>
+  
+    <div class="footer-main">
+      <span>SHIVAM VERMA</span>
+      <span class="footer-role">SENIOR SOFTWARE ENGINEER</span>
+      <span>&copy; 2026</span>
+    </div>
   </footer>
 
   <script>
