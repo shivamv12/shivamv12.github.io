@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shivam Verma — Senior Software Engineer</title>
+  <meta name="description"
+    content="Shivam Verma, Senior Software Engineer. Architect of Horse Watch (~100K monthly users) and Newbie. React, Node.js, AWS, micro-frontends.">
+  <meta name="theme-color" content="#0a0e14">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Shivam Verma — Senior Software Engineer">
+  <meta property="og:description"
+    content="Architect of Horse Watch (~100K monthly users) and Newbie. React, Node.js, AWS, micro-frontends.">
+  <meta property="og:image" content="https://shivamv12.github.io/assets/images/me.jpg">
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E⚡%3C/text%3E%3C/svg%3E">
+
+  <script>
+    /* show the boot sequence once per session, never with reduced motion */
+    try {
+      if (!sessionStorage.getItem('booted') && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.documentElement.classList.add('booting');
+      }
+    } catch (e) { }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/hud.css">
+</head>
+
+<body>
+
+  <div id="boot" class="boot" aria-hidden="true">
+    <pre id="boot-log"></pre>
+    <span class="boot__skip">press any key to skip</span>
+  </div>
+
+  <nav class="site-nav" aria-label="Primary">
+    <a class="site-nav__brand" href="#top"><span class="status-dot" aria-hidden="true"></span>SV//</a>
+    <ul class="site-nav__links">
+      <li><a href="#top">Profile</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#portfolio">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+    </ul>
+    <a class="btn site-nav__resume" href="assets/docs/shivam-verma-resume.pdf" target="_blank"
+      rel="noopener noreferrer">Resume</a>
+  </nav>
+
+  <main>
+    <section id="top" class="intro">
+      <div class="intro__grid">
+        <div class="intro__main">
+          <p class="eyebrow">Senior Software Engineer</p>
+          <h1 class="intro__name">Shivam Verma</h1>
+          <p class="intro__summary">
+            Full-stack engineer with 8 years building production web platforms. Architected Horse Watch, a
+            micro-frontend widget used by ~100K monthly users across Daily Racing Form's apps, and
+            architected
+            Newbie, which brought ~10K sign-ups during Breeders' Cup 2025. Led a team of 7 engineers.
+          </p>
+          <div class="intro__cta">
+            <a class="btn btn--primary" href="#portfolio">View projects</a>
+            <a class="btn" href="assets/docs/shivam-verma-resume.pdf" target="_blank"
+              rel="noopener noreferrer">Resume</a>
+          </div>
+          <div class="social">
+            <a href="https://linkedin.com/in/shivamv1996" target="_blank" rel="noopener noreferrer"
+              aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/shivamv12" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i
+                class="fab fa-github"></i></a>
+            <a href="https://medium.com/@shivamv12" target="_blank" rel="noopener noreferrer" aria-label="Medium"><i
+                class="fab fa-medium"></i></a>
+            <a href="https://stackoverflow.com/users/9246940/shivam-verma" target="_blank" rel="noopener noreferrer"
+              aria-label="Stack Overflow"><i class="fab fa-stack-overflow"></i></a>
+          </div>
+        </div>
+
+        <aside class="panel status" aria-label="At a glance">
+          <div class="status__head">
+            <img class="status__photo" src="assets/images/me.jpg" alt="Shivam Verma" width="72" height="72">
+            <div>
+              <span class="status__label">System profile</span>
+              <span class="status__online"><span class="status-dot" aria-hidden="true"></span>Online</span>
+            </div>
+          </div>
+          <dl class="status__rows">
+            <div>
+              <dt>Role</dt>
+              <dd>Senior Software Engineer</dd>
+            </div>
+            <div>
+              <dt>Now</dt>
+              <dd>Incubit · Anko GCC</dd>
+            </div>
+            <div>
+              <dt>Focus</dt>
+              <dd>Full-stack · System Design · Architecture</dd>
+            </div>
+            <div>
+              <dt>Stack</dt>
+              <dd>JavaScript · Node.js · React · MongoDB · Kafka · AWS</dd>
+            </div>
+          </dl>
+          <ul class="stats">
+            <li><strong>8</strong><span>years</span></li>
+            <li><strong>~100K</strong><span>monthly users, Horse Watch</span></li>
+            <li><strong>~10K</strong><span>sign-ups, Newbie 2025</span></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2 class="section-title">[Experience]</h2>
+
+      <!-- Incubit -->
+      <div class="company-block">
+        <div class="company-header">
+          <h3>Incubit</h3>
+          <span>Bangalore | Hybrid</span>
+        </div>
+
+        <div class="timeline">
+          <div class="role">
+            <span class="dot"></span>
+            <div class="details">
+              <h4>Senior Software Engineer</h4>
+              <span>Sept 2026 – Present</span>
+              <span class="client-tag">Client: Anko GCC · Kmart Australia</span>
+              <ul>
+                <li>Contributing to full-stack engineering initiatives for Kmart Australia through Anko
+                  GCC.</li>
+                <li>Building and maintaining features across the stack with JavaScript, TypeScript,
+                  React, Node.js, PostgreSQL and Kafka.</li>
+                <!-- Add specifics (features, ownership, impact) as they land -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Haptiq Labs -->
+      <div class="company-block">
+        <div class="company-header">
+          <h3>Haptiq Labs (Formerly Webonise Lab)</h3>
+          <span>Pune | Remote</span>
+        </div>
+
+        <div class="timeline">
+          <div class="role">
+            <span class="dot"></span>
+            <div class="details">
+              <h4>Senior Software Engineer | Team Lead</h4>
+              <span>Jan 2025 – Jul 2026</span>
+              <ul>
+                <li>Promoted to Team Lead and led a cross-functional team of 7 engineers across
+                  frontend, backend, and UI disciplines, driving sprint planning, technical grooming,
+                  release management, and hiring activities.</li>
+                <li>Architected and delivered Horse Watch, an app-agnostic micro frontend platform
+                  enabling runtime integration, API contracts, and independent deployments across
+                  React and legacy web applications.</li>
+                <li>Architected Horse Watch's real-time communication layer using leader election (Web
+                  Locks API and BroadcastChannel), enabling cross-tab SSE synchronisation that reduced
+                  backend connections from O(n) to O(1) with seamless failover.</li>
+                <li>Spearheaded development and launch of Newbie, a greenfield application built with
+                  Preact, owning delivery from architecture through Phase-1 release.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Webonise Lab -->
+      <div class="company-block">
+        <div class="company-header">
+          <h3>Webonise Lab</h3>
+          <span>Pune | Remote</span>
+        </div>
+
+        <div class="timeline">
+          <div class="role">
+            <span class="dot"></span>
+            <div class="details">
+              <h4>Senior Software Engineer</h4>
+              <span>Apr 2023 – Dec 2024</span>
+              <ul>
+                <li>Modernised a large-scale, high-traffic application by migrating 100+ class-based
+                  React components from React 16 to React 18 while maintaining uninterrupted feature
+                  delivery.</li>
+                <li>Improved application performance by introducing progressive data-loading strategies,
+                  reducing initial page load time on key product pages by approximately 3 seconds.
+                </li>
+                <li>Transformed multiple legacy PHP and Backbone.js applications into scalable
+                  React-based platforms, improving maintainability, user experience, and long-term
+                  extensibility.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pracemo Global Solutions -->
+      <div class="company-block">
+        <div class="company-header">
+          <h3>Pracemo Global Solutions</h3>
+          <span>Pune | Remote</span>
+        </div>
+
+        <div class="timeline">
+          <div class="role">
+            <span class="dot"></span>
+            <div class="details">
+              <h4>Software Consultant</h4>
+              <span>Oct 2021 – Apr 2023</span>
+              <span class="client-tag">Client: Ather Energy</span>
+              <ul>
+                <li>Designed and developed scalable backend REST APIs using Node.js and Express.js for
+                  customer-facing applications at Ather Energy.</li>
+                <li>Built and maintained backend services following layered architecture principles,
+                  focusing on clean business logic separation, maintainability, and performance.</li>
+                <li>Optimised API workflows and backend processes to improve application scalability,
+                  reliability, and operational efficiency.</li>
+                <li>Collaborated with cross-functional engineering teams to design and deliver backend
+                  solutions aligned with business requirements and system architecture.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skreem Technologies -->
+      <div class="company-block">
+        <div class="company-header">
+          <h3>Skreem Technologies Pvt Ltd</h3>
+          <span>Bengaluru | Onsite</span>
+        </div>
+
+        <div class="timeline">
+          <!-- Associate Software Engineer -->
+          <div class="role">
+            <span class="dot"></span>
+            <div class="details">
+              <h4>Associate Software Engineer</h4>
+              <span>Nov 2020 – Oct 2021</span>
+              <ul>
+                <li>Designed and developed backend services and REST APIs using Node.js, Express.js, and
+                  MongoDB to support influencer-brand collaboration, campaign management, and
+                  reporting workflows.</li>
+                <li>Implemented Redis-based caching and BullMQ-powered background job processing to
+                  improve asynchronous task execution, application performance, and scalability.</li>
+                <li>Developed scalable backend modules for user management, campaign workflows, and data
+                  processing while ensuring code quality and maintainability.</li>
+                <li>Collaborated with frontend and product teams to deliver reliable end-to-end features
+                  across the complete software development lifecycle.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Jr. Software Developer -->
+          <div class="role">
+            <span class="dot"></span>
+            <div class="details">
+              <h4>Junior Software Developer</h4>
+              <span>Sep 2019 – Oct 2020</span>
+              <ul>
+                <li>Contributed to the development of the Skreem web platform by implementing backend
+                  features and REST APIs using Node.js, Express.js, and MongoDB.</li>
+                <li>Collaborated with senior engineers to translate business requirements into scalable
+                  technical solutions while following software engineering best practices.</li>
+                <li>Participated in application refactoring, debugging, and performance optimization to
+                  improve code quality and maintainability.</li>
+                <li>Worked closely with frontend developers and QA teams throughout the software
+                  development lifecycle, from feature implementation to production deployment.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Artomate Studio -->
+      <div class="company-block">
+        <div class="company-header">
+          <h3>Artomate Studio</h3>
+          <span>Bengaluru | Onsite</span>
+        </div>
+
+        <div class="timeline">
+          <div class="role">
+            <span class="dot"></span>
+            <div class="details">
+              <h4>Web Developer</h4>
+              <span>Aug 2018 – Apr 2019</span>
+              <ul>
+                <li>Contributed to the development of the Skreem web platform by implementing backend
+                  features and REST APIs using Node.js, Express.js, and MongoDB.</li>
+                <li>Collaborated with senior engineers to translate business requirements into scalable
+                  technical solutions while following software engineering best practices.</li>
+                <li>Participated in application refactoring, debugging, and performance optimization to
+                  improve code quality and maintainability.</li>
+                <li>Worked closely with frontend developers and QA teams throughout the software
+                  development lifecycle, from feature implementation to production deployment.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Softpro India Pvt Ltd -->
+      <div class="company-block">
+        <div class="company-header">
+          <h3>Softpro India Pvt Ltd</h3>
+          <span>Lucknow | Onsite</span>
+        </div>
+
+        <div class="timeline">
+          <div class="role">
+            <span class="dot"></span>
+            <div class="details">
+              <h4>.Net Developer (Training)</h4>
+              <span>Jun 2016 – Jul 2016</span>
+              <ul>
+                <li>Completed 360 hours of industrial training in ASP.NET, C#, HTML5, CSS3, JavaScript,
+                  and MySQL, gaining hands-on experience in full-stack web development.</li>
+                <li>Developed responsive web applications and CRUD-based modules as part of real-world
+                  training assignments, following the MVC architecture.</li>
+                <li>Built desktop applications using C# and Windows Forms, strengthening object-oriented
+                  programming concepts and database integration.</li>
+                <li>Worked with SQL queries, stored procedures, and backend connectivity while
+                  integrating applications with MySQL databases.</li>
+                <li>Learned software development best practices, including code organization, debugging,
+                  testing, and version control fundamentals in a collaborative environment.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">&lt;Tech Stack&gt;</h2>
+      <div class="projects">
+        <div class="project">
+          <div class="content" style="text-align: justify;">
+            <h4>AI Integration / Prompt Engineering</h4><br />
+            <p>Built AI-powered applications by integrating LLMs into React Native and NestJS, leveraging
+              prompt engineering for intelligent image analysis.</p>
+          </div>
+        </div>
+        <div class="project">
+          <div class="content">
+            <h4>JavaScript / TypeScript</h4><br />
+            <p>Built scalable frontend and backend applications using modern ES6+ features, TypeScript, and
+              asynchronous programming patterns.</p>
+          </div>
+        </div>
+        <div class="project">
+          <div class="content">
+            <h4>Node.Js / Express / NestJs</h4><br />
+            <p>Designed scalable backend services, REST APIs, authentication flows, and layered
+              architectures for production applications.</p>
+          </div>
+        </div>
+        <div class="project">
+          <div class="content">
+            <h4>React / React Native</h4><br />
+            <p>Developed performant web and mobile applications with reusable components, modern React
+              patterns, and responsive user experiences.</p>
+          </div>
+        </div>
+      </div>
+      <div class="projects">
+        <div class="project">
+          <div class="content">
+            <h4>NoSQL / MongoDB</h4><br />
+            <p>Designed scalable data models, optimized queries, and implemented efficient data access
+              patterns for production systems.</p>
+          </div>
+        </div>
+        <div class="project">
+          <div class="content">
+            <h4>AWS (S3 / CloudFront / Transcoder)</h4><br />
+            <p>Worked with AWS services including S3, ECS, ECR, and IAM for cloud storage, containerized
+              deployments, and application hosting.</p>
+          </div>
+        </div>
+        <div class="project">
+          <div class="content">
+            <h4>Redis / Bull MQ</h4><br />
+            <p>Implemented caching strategies and background job processing to improve application
+              performance, scalability, and asynchronous task execution.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <h2 class="section-title">{ Projects }</h2>
+
+      <div class="projects">
+        <!-- 1. Horse Watch -->
+        <div class="project">
+          <img src="assets/images/portfolio/horse-watch.png" alt="Horse Watch widget" loading="lazy">
+          <div class="content">
+            <h3>Horse Watch</h3>
+            <p>Cross-app micro-frontend widget for Daily Racing Form. ~70K of ~100K monthly users opened it
+              in month one.
+              <a href="https://www.drf.com" target="_blank" rel="noopener noreferrer">View live</a><br />
+              <span class="note">*Company project: Haptiq</span>
+            </p>
+            <button type="button" class="case-btn" data-case="cs-horse-watch" aria-haspopup="dialog">Case
+              study <span aria-hidden="true">→</span></button>
+          </div>
+        </div>
+
+        <!-- 2. Skreem -->
+        <div class="project">
+          <img src="assets/images/portfolio/Skreem-portal.png" alt="Skreem influencer marketing platform"
+            loading="lazy">
+          <div class="content">
+            <h3>Skreem</h3>
+            <p>Brand and influencer collaboration portal. ~50K influencers, ~3K brands. No longer
+              live.<br />
+              <span class="note">*Company project: Skreem</span>
+            </p>
+            <button type="button" class="case-btn" data-case="cs-skreem" aria-haspopup="dialog">Case study
+              <span aria-hidden="true">→</span></button>
+          </div>
+        </div>
+
+        <!-- 3. NeuraLens -->
+        <div class="project">
+          <img src="assets/images/portfolio/Neura-lens.jpeg" alt="NeuraLens" loading="lazy">
+          <div class="content">
+            <h3>NeuraLens</h3>
+            <p>Self-directed LLM image-analysis app in React Native &amp; NestJS.
+              <a href="https://github.com/shivamv12/neura-lens" target="_blank" rel="noopener noreferrer">App</a> ·
+              <a href="https://github.com/shivamv12/neura-lens-server" target="_blank"
+                rel="noopener noreferrer">Server</a>
+            </p>
+            <button type="button" class="case-btn" data-case="cs-neuralens" aria-haspopup="dialog">Case
+              study <span aria-hidden="true">→</span></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="projects">
+        <!-- 4. RAG Pipeline Visualizer -->
+        <div class="project">
+          <img src="assets/images/portfolio/RAG-pipeline.png" alt="RAG Pipeline Visualizer" loading="lazy">
+          <div class="content">
+            <h3>RAG Pipeline Visualizer</h3>
+            <p>Self-directed RAG pipeline over the Express.js docs that exposes every stage.
+              <a href="https://lnkd.in/p/gxAnNeYj" target="_blank" rel="noopener noreferrer">Read the
+                write-up</a>
+            </p>
+            <!-- TODO: add repo link here -->
+            <button type="button" class="case-btn" data-case="cs-rag" aria-haspopup="dialog">Case study
+              <span aria-hidden="true">→</span></button>
+          </div>
+        </div>
+
+        <!-- Newbie -->
+        <div class="project">
+          <img src="assets/images/portfolio/Newbie.png" alt="Newbie Horse Racing" loading="lazy">
+          <div class="content">
+            <h3>Newbie Horse Racing</h3>
+            <p>Satellite web app that brings a younger audience into DRF. ~10K sign-ups during Breeders' Cup
+              2025.
+              <a href="https://newbie.drf.com" target="_blank" rel="noopener noreferrer">View
+                live</a><br />
+              <span class="note">*Company project: Haptiq</span>
+            </p>
+            <button type="button" class="case-btn" data-case="cs-newbie" aria-haspopup="dialog">Case study
+              <span aria-hidden="true">→</span></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Earlier projects -->
+      <div class="earlier">
+        <h3>Earlier projects</h3>
+        <ul>
+          <li>
+            <button type="button" class="thumb" data-img="assets/images/portfolio/9.png" data-title="RaspadoGit"
+              data-desc="GitHub API integration in Angular" data-repo="https://github.com/shivamv12/raspadogit"
+              aria-label="Preview RaspadoGit">
+              <img src="assets/images/portfolio/9.png" alt="" loading="lazy">
+            </button>
+            <div>
+              <a href="https://github.com/shivamv12/raspadogit" target="_blank" rel="noopener noreferrer">RaspadoGit</a>
+              <span>GitHub API integration in Angular</span>
+            </div>
+          </li>
+          <li>
+            <button type="button" class="thumb" data-img="assets/images/portfolio/4.jpg" data-title="WeTubeVids"
+              data-desc="YouTube API integration in Core PHP" data-repo="https://github.com/shivamv12/wetubevids"
+              aria-label="Preview WeTubeVids">
+              <img src="assets/images/portfolio/4.jpg" alt="" loading="lazy">
+            </button>
+            <div>
+              <a href="https://github.com/shivamv12/wetubevids" target="_blank" rel="noopener noreferrer">WeTubeVids</a>
+              <span>YouTube API integration in Core PHP</span>
+            </div>
+          </li>
+          <li>
+            <button type="button" class="thumb" data-img="assets/images/portfolio/8.jpg" data-title="TrainFinder"
+              data-desc="Indian Railway API integration in Laravel" data-repo="https://github.com/shivamv12/trainfinder"
+              aria-label="Preview TrainFinder">
+              <img src="assets/images/portfolio/8.jpg" alt="" loading="lazy">
+            </button>
+            <div>
+              <a href="https://github.com/shivamv12/trainfinder" target="_blank"
+                rel="noopener noreferrer">TrainFinder</a>
+              <span>Indian Railway API integration in Laravel</span>
+            </div>
+          </li>
+          <li>
+            <button type="button" class="thumb" data-img="assets/images/portfolio/5.jpg" data-title="MediSmart"
+              data-desc="Desktop application using Java Swing" data-repo="https://github.com/shivamv12/medismart"
+              aria-label="Preview MediSmart">
+              <img src="assets/images/portfolio/5.jpg" alt="" loading="lazy">
+            </button>
+            <div>
+              <a href="https://github.com/shivamv12/medismart" target="_blank" rel="noopener noreferrer">MediSmart</a>
+              <span>Desktop application using Java Swing</span>
+            </div>
+          </li>
+          <li>
+            <button type="button" class="thumb" data-img="assets/images/portfolio/13.png"
+              data-title="Voice Controlled Remote" data-desc="JS WebKit speech recognition API"
+              data-repo="https://github.com/shivamv12/nodejs-speech-recognition"
+              aria-label="Preview Voice Controlled Remote">
+              <img src="assets/images/portfolio/13.png" alt="" loading="lazy">
+            </button>
+            <div>
+              <a href="https://github.com/shivamv12/nodejs-speech-recognition" target="_blank"
+                rel="noopener noreferrer">Voice Controlled Remote</a>
+              <span>JS WebKit speech recognition API</span>
+            </div>
+          </li>
+          <li>
+            <button type="button" class="thumb" data-img="assets/images/portfolio/14.jpg" data-title="Highway Riders"
+              data-desc="C++ graphics road-rage game" data-repo="https://github.com/shivamv12/highway-riders-car-race"
+              aria-label="Preview Highway Riders">
+              <img src="assets/images/portfolio/14.jpg" alt="" loading="lazy">
+            </button>
+            <div>
+              <a href="https://github.com/shivamv12/highway-riders-car-race" target="_blank"
+                rel="noopener noreferrer">Highway Riders</a>
+              <span>C++ graphics road-rage game</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Shared image viewer (place next to the other dialogs) -->
+      <dialog id="image-viewer" class="case-modal image-viewer" aria-labelledby="iv-title">
+        <div class="case-modal__inner">
+          <button type="button" class="case-modal__close" aria-label="Close preview">&times;</button>
+          <h3 id="iv-title"></h3>
+          <p class="case-modal__meta" id="iv-desc"></p>
+          <img id="iv-img" alt="">
+          <a id="iv-repo" class="case-btn" target="_blank" rel="noopener noreferrer">View on GitHub <span
+              aria-hidden="true">→</span></a>
+        </div>
+      </dialog>
+
+      <!-- Case study modals -->
+      <dialog id="cs-horse-watch" class="case-modal" aria-labelledby="cs-horse-watch-title">
+        <div class="case-modal__inner">
+          <button type="button" class="case-modal__close" aria-label="Close case study">&times;</button>
+          <h3 id="cs-horse-watch-title">Horse Watch</h3>
+          <p class="case-modal__meta">Daily Racing Form · Company project: Haptiq</p>
+          <dl class="case-list">
+            <div>
+              <dt>Problem</dt>
+              <dd>DRF runs many small apps under one umbrella (SSTF, single site top of funnel) and wanted
+                one widget across all of them.</dd>
+            </div>
+            <div>
+              <dt>Decision</dt>
+              <dd>A loader plus widget manager, injected into every app through GTM.</dd>
+            </div>
+            <div>
+              <dt>Rejected</dt>
+              <dd>Installing a package in each host app, which forced a production deployment of every app
+                per change.</dd>
+            </div>
+            <div>
+              <dt>Delivery</dt>
+              <dd>Versioned loader files in S3, a copy in <code>/latest</code>, and GTM loads
+                <code>/latest</code>.
+              </dd>
+            </div>
+            <div>
+              <dt>Isolation</dt>
+              <dd>Shadow DOM with <code>HW-*</code> prefixed ids and classes.</dd>
+            </div>
+            <div>
+              <dt>Real-time</dt>
+              <dd>Leader election (Web Locks API + BroadcastChannel) shares one SSE connection across
+                tabs, cutting backend connections from O(n) to O(1).</dd>
+            </div>
+            <div>
+              <dt>Outcome</dt>
+              <dd>Live at drf.com. ~70K of ~100K monthly users opened the widget in month one.</dd>
+            </div>
+            <div>
+              <dt>Trade-off</dt>
+              <dd>GTM injection adds a runtime dependency on the tag manager. Ad-blocker impact is
+                unmeasured.</dd>
+            </div>
+            <div>
+              <dt>Stack</dt>
+              <dd>Shadow DOM, GTM, S3, SSE, Web Locks API, BroadcastChannel</dd>
+            </div>
+          </dl>
+        </div>
+      </dialog>
+
+      <dialog id="cs-skreem" class="case-modal" aria-labelledby="cs-skreem-title">
+        <div class="case-modal__inner">
+          <button type="button" class="case-modal__close" aria-label="Close case study">&times;</button>
+          <h3 id="cs-skreem-title">Skreem</h3>
+          <p class="case-modal__meta">Brand and influencer collaboration portal · Company project: Skreem</p>
+          <dl class="case-list">
+            <div>
+              <dt>Problem</dt>
+              <dd>Brands and influencers needed a dedicated place to manage collaborations. Instagram
+                wasn't a practical tool for it.</dd>
+            </div>
+            <div>
+              <dt>Decision</dt>
+              <dd>Rewrote the platform from scratch in Node.js, replacing an older Rails app, as the team
+                standardised on the MERN stack.</dd>
+            </div>
+            <!-- CONFIRM: scope of "rewrote" (whole platform or your modules) -->
+            <div>
+              <dt>Architecture</dt>
+              <dd>Event-driven backend with Redis-backed job queues (BullMQ) and Kafka.</dd>
+            </div>
+            <!-- CONFIRM: keep Kafka wording to your actual involvement -->
+            <div>
+              <dt>Scale</dt>
+              <dd>~50K influencers, ~3K brands. No longer live.</dd>
+            </div>
+            <div>
+              <dt>Stack</dt>
+              <dd>Node.js, Express, MongoDB, Redis, BullMQ, Kafka</dd>
+            </div>
+          </dl>
+        </div>
+      </dialog>
+
+      <dialog id="cs-neuralens" class="case-modal" aria-labelledby="cs-neuralens-title">
+        <div class="case-modal__inner">
+          <button type="button" class="case-modal__close" aria-label="Close case study">&times;</button>
+          <h3 id="cs-neuralens-title">NeuraLens</h3>
+          <p class="case-modal__meta">Self-directed project</p>
+          <dl class="case-list">
+            <div>
+              <dt>Goal</dt>
+              <dd>Learn LLM integration in React Native.</dd>
+            </div>
+            <div>
+              <dt>What it does</dt>
+              <dd>Capture or upload an image and get a structured analysis (overview, key objects,
+                context) plus an explicit-content flag.</dd>
+            </div>
+            <div>
+              <dt>Decision</dt>
+              <dd>A structured prompt (Role, Task, Context, Rules, Reasoning, Stop condition, Output)
+                returning strict JSON with an <code>explicitContent</code> field.</dd>
+            </div>
+            <div>
+              <dt>Trade-off</dt>
+              <dd>Prompt-based flagging means the same model analyzes and polices the image. A production
+                system would add a dedicated moderation service.</dd>
+            </div>
+            <div>
+              <dt>Stack</dt>
+              <dd>React Native (Expo), NestJS, MongoDB, S3 pre-signed uploads, Llama 4 Maverick via
+                OpenRouter</dd>
+            </div>
+          </dl>
+        </div>
+      </dialog>
+
+      <dialog id="cs-rag" class="case-modal" aria-labelledby="cs-rag-title">
+        <div class="case-modal__inner">
+          <button type="button" class="case-modal__close" aria-label="Close case study">&times;</button>
+          <h3 id="cs-rag-title">RAG Pipeline Visualizer</h3>
+          <p class="case-modal__meta">Self-directed project</p>
+          <dl class="case-list">
+            <div>
+              <dt>Stages exposed</dt>
+              <dd>Query embedding, retrieval with similarity scores, prompt construction, answer
+                generation.</dd>
+            </div>
+            <div>
+              <dt>Finding</dt>
+              <dd>"Can I use Express behind nginx?" failed. The docs say "reverse proxy", so retrieval
+                missed content that was in the corpus. The similarity threshold stopped the request
+                instead of letting the LLM answer confidently.</dd>
+            </div>
+            <div>
+              <dt>Eval</dt>
+              <dd>Recall@3 harness comparing fixed-size and structure-aware chunking. Results so far are
+                inconclusive.</dd>
+            </div>
+            <div>
+              <dt>Next</dt>
+              <dd>Hybrid search (BM25), re-ranking, MRR.</dd>
+            </div>
+            <div>
+              <dt>Stack</dt>
+              <dd>Node/Express, React, transformers.js (all-MiniLM-L6-v2), JSON vector store with cosine
+                similarity, OpenRouter</dd>
+            </div>
+          </dl>
+        </div>
+      </dialog>
+
+      <dialog id="cs-newbie" class="case-modal" aria-labelledby="cs-newbie-title">
+        <div class="case-modal__inner">
+          <button type="button" class="case-modal__close" aria-label="Close case study">&times;</button>
+          <h3 id="cs-newbie-title">Newbie Horse Racing</h3>
+          <p class="case-modal__meta">Daily Racing Form · Company project: Haptiq</p>
+          <dl class="case-list">
+            <div>
+              <dt>Problem</dt>
+              <dd>DRF's core audience skews older, and younger people were less drawn to horse racing. DRF
+                needed a way to reach them.</dd>
+            </div>
+            <div>
+              <dt>Role</dt>
+              <dd>Architect and hands-on engineer, designing the system with the tech manager and writing
+                code.</dd>
+            </div>
+            <div>
+              <dt>Decision</dt>
+              <dd>Launch Newbie as a separate satellite product instead of redesigning the core site. It
+                carries the same racing data and information with a simpler, friendlier UI/UX for Gen Z
+                and first-timers.</dd>
+            </div>
+            <div>
+              <dt>Funnel</dt>
+              <dd>Newbie prompts sign-up and routes the traffic it attracts into core DRF, so it works as
+                a top-of-funnel product.</dd>
+            </div>
+            <div>
+              <dt>Outcome</dt>
+              <dd>Almost 10K new users signed up through Newbie during the Breeders' Cup event (Oct–Nov
+                2025).</dd>
+            </div>
+            <div>
+              <dt>Stack</dt>
+              <dd>Preact frontend, Node.js backend-for-frontend (BFF)</dd>
+            </div>
+            <div>
+              <dt>Status</dt>
+              <dd>Live at <a href="https://newbie.drf.com" target="_blank" rel="noopener noreferrer">newbie.drf.com</a>.
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </dialog>
+    </section>
+
+    <section id="education">
+      <h2 class="section-title">% Education %</h2>
+
+      <div class="company-block">
+        <div class="company-header">
+          <h3>Indira Gandhi National Open University</h3>
+          <span>Lucknow</span>
+        </div>
+
+        <div class="timeline">
+          <!-- MCA -->
+          <div class="role">
+            <span class="dot"></span>
+            <div class="details">
+              <h4>Master of Computer Application (MCA)</h4>
+              <span>June 2018 | 63%</span>
+              <ul>
+                <li>Developed a Desktop Application for Medical Appointments using Java Swing.</li>
+                <li>Focused on software development, database management, and desktop UI design.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- BCA -->
+          <div class="role">
+            <span class="dot"></span>
+            <div class="details">
+              <h4>Bachelor of Computer Application (BCA)</h4>
+              <span>June 2016 | 61%</span>
+              <ul>
+                <li>Developed a replica of an Online Grocery Store system demonstrating practical web
+                  development skills.
+                </li>
+                <li>Studied programming fundamentals, database management, and front-end technologies.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Image Modal -->
+  <div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImg">
+    <div id="caption"></div>
+  </div>
+
+  <footer>
+    <p>&copy;
+      <script>document.write(new Date().getFullYear())</script> Shivam Verma. Built with ❤️
+    </p>
+  </footer>
+
+  <script>
+    // Get modal elements
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImg");
+    const captionText = document.getElementById("caption");
+    const closeBtn = document.getElementsByClassName("close")[0];
+
+    // Select all project images
+    const projectImages = document.querySelectorAll(".project img");
+
+    projectImages.forEach(img => {
+      img.addEventListener("click", () => {
+        modal.style.display = "block";
+        modalImg.src = img.src;
+        captionText.innerHTML = img.alt;
+      });
+    });
+
+    // Close modal
+    closeBtn.onclick = function () {
+      modal.style.display = "none";
+    }
+
+    // Close modal on click outside image
+    modal.onclick = function (e) {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+  <script>
+      (() => {
+        document.querySelectorAll('[data-case]').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const dlg = document.getElementById(btn.dataset.case);
+            if (!dlg) return;
+            dlg.showModal();
+            document.body.classList.add('modal-open');
+          });
+        });
+
+        document.querySelectorAll('dialog.case-modal').forEach((dlg) => {
+          dlg.querySelector('.case-modal__close').addEventListener('click', () => dlg.close());
+          dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); }); // backdrop click
+          dlg.addEventListener('close', () => document.body.classList.remove('modal-open'));
+        });
+      })();
+  </script>
+
+  <script>
+    (() => {
+      const dlg = document.getElementById('image-viewer');
+      const img = document.getElementById('iv-img');
+      const title = document.getElementById('iv-title');
+      const desc = document.getElementById('iv-desc');
+      const repo = document.getElementById('iv-repo');
+
+      document.querySelectorAll('.thumb').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          img.src = btn.dataset.img;
+          img.alt = btn.dataset.title + ' screenshot';
+          title.textContent = btn.dataset.title;
+          desc.textContent = btn.dataset.desc;
+          repo.href = btn.dataset.repo;
+          dlg.showModal();
+          document.body.classList.add('modal-open');
+        });
+      });
+    })();
+  </script>
+
+  <script src="assets/js/hud.js" defer></script>
+</body>
+
+</html>
