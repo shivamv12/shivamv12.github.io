@@ -15,6 +15,38 @@
   --nav-h: 56px;
 }
 
+/* =========================================================
+   TEXT JUSTIFICATION — INTRO, TECH STACK & PROJECTS
+   ========================================================= */
+
+/* 1. Top intro */
+.intro__summary {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* 2. Tech Stack descriptions */
+.tech-grid .project .content p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* 3. Project descriptions */
+#portfolio>.projects .project .content>p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* 4. Mobile: prevent awkward spacing */
+@media (max-width: 480px) {
+
+  .intro__summary,
+  .tech-grid .project .content p,
+  #portfolio>.projects .project .content>p {
+    text-align: left;
+  }
+}
+
 html {
   background: radial-gradient(900px 500px at 50% -10%, rgba(76, 217, 255, 0.10), transparent 70%), var(--bg);
   scroll-padding-top: calc(var(--nav-h) + 16px);
