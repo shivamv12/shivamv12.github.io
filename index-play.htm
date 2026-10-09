@@ -20,7 +20,7 @@
   <div class="ambient" aria-hidden="true"></div>
 
   <section class="opening" id="opening" aria-label="Portfolio opening">
-    <p class="kicker">PRESENTING PORTFOLIO OF</p>
+    <p class="minimal-kicker">PRESENTING PORTFOLIO OF</p>
     <h1>SHIVAM<br><span>VERMA</span></h1>
     <div class="opening-foot"><span>FULL-STACK ENGINEER</span><span>EST. 2018</span></div>
     <div class="progress"><span></span></div>
@@ -63,9 +63,16 @@
 
   <div class="series" id="series" hidden>
     <nav class="topbar"><a class="brand" href="#home"><span class="brand-mark">SV</span><span>S SERIES</span></a>
-      <div class="top-links"><a href="#home">Home</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a
-          href="#projects">Projects</a><a href="#education">Education</a></div><a class="resume"
-        href="./assets/docs/shivam-verma-resume.pdf" target="_blank" rel="noopener noreferrer">↓ Résumé</a>
+      <div class="top-links">
+        <a href="#home">Home</a>
+        <a href="#experience">Journey</a>
+        <a href="#skills">Toolkit</a>
+        <a href="#projects">Originals</a>
+        <a href="#education">Foundation</a>
+        <a href="#beyond-code">Beyond the Code</a>
+      </div>
+      <a class="resume" href="./assets/docs/shivam-verma-resume.pdf" target="_blank" rel="noopener noreferrer">↓
+        Résumé</a>
     </nav>
     <main>
       <section class="hero" id="home">
@@ -93,20 +100,43 @@
           </div>
           <p class="aside">A quick route through the work, the skills, and the story behind them.</p>
         </div>
-        <div class="episodes">
-          <a class="episode" style="--glow:#ff24472b" href="#experience"><small>EPISODE 01</small><b>01</b>
-            <h3>THE JOURNEY</h3>
-            <p>Experience & leadership</p>
-          </a><a class="episode" style="--glow:#379fd32b" href="#skills"><small>EPISODE 02</small><b>&lt;/&gt;</b>
-            <h3>THE TOOLKIT</h3>
-            <p>Stack & engineering strengths</p>
-          </a><a class="episode" style="--glow:#ffae402b" href="#projects"><small>EPISODE 03</small><b>✦</b>
-            <h3>THE ORIGINALS</h3>
-            <p>Products & side projects</p>
-          </a><a class="episode" style="--glow:#45c68b22" href="#education"><small>EPISODE 04</small><b>◎</b>
-            <h3>THE FOUNDATION</h3>
-            <p>Education & early work</p>
-          </a>
+
+        <div class="carousel-wrap episodes-carousel">
+          <button class="arrow prev" aria-label="Scroll episodes left">‹</button>
+        
+          <div class="episodes">
+            <a class="episode" style="--glow:#ff24472b" href="#experience">
+              <small>EPISODE 01</small><b>01</b>
+              <h3>THE JOURNEY</h3>
+              <p>Experience &amp; leadership</p>
+            </a>
+        
+            <a class="episode" style="--glow:#379fd32b" href="#skills">
+              <small>EPISODE 02</small><b>&lt;/&gt;</b>
+              <h3>THE TOOLKIT</h3>
+              <p>Stack &amp; engineering strengths</p>
+            </a>
+        
+            <a class="episode" style="--glow:#ffae402b" href="#projects">
+              <small>EPISODE 03</small><b>✦</b>
+              <h3>THE ORIGINALS</h3>
+              <p>Products &amp; side projects</p>
+            </a>
+        
+            <a class="episode" style="--glow:#45c68b22" href="#education">
+              <small>EPISODE 04</small><b>◎</b>
+              <h3>THE FOUNDATION</h3>
+              <p>Education &amp; early work</p>
+            </a>
+        
+            <a class="episode" style="--glow:#e509142b" href="#beyond-code">
+              <small>EPISODE 05</small><b>↗</b>
+              <h3>BEYOND THE CODE</h3>
+              <p>Writing, sharing &amp; problem solving</p>
+            </a>
+          </div>
+        
+          <button class="arrow next" aria-label="Scroll episodes right">›</button>
         </div>
       </section>
 
@@ -114,7 +144,7 @@
         <div class="section-heading">
           <div>
             <p class="red-kicker">THE STORY SO FAR</p>
-            <h2>Experience</h2>
+            <h2>MY <span>JOURNEY</span></h2>
           </div>
           <p class="aside">From backend engineering to frontend platforms and team leadership.</p>
         </div>
@@ -183,7 +213,7 @@
         <div class="section-heading">
           <div>
             <p class="red-kicker">THE TOOLKIT</p>
-            <h2>Tech stack</h2>
+            <h2>TECH <span>STACK</span></h2>
           </div>
           <p class="aside">Tools are only useful when they solve the right problem.</p>
         </div>
@@ -226,7 +256,7 @@
         <div class="section-heading">
           <div>
             <p class="red-kicker">THE ORIGINALS</p>
-            <h2>Selected projects</h2>
+            <h2>SELECTED <span>PROJECTS</span></h2>
           </div>
           <p class="aside">Production platforms and self-directed builds.</p>
         </div>
@@ -289,7 +319,7 @@
         <div class="section-heading">
           <div>
             <p class="red-kicker">FROM THE ARCHIVE</p>
-            <h2>Earlier projects</h2>
+            <h2>EARLIER <span>PROJECTS</span></h2>
           </div>
           <p class="aside">Experiments and builds that came before.</p>
         </div>
@@ -326,7 +356,7 @@
         <div class="section-heading">
           <div>
             <p class="red-kicker">THE FOUNDATION</p>
-            <h2>Education</h2>
+            <h2>WHERE <span>IT BEGAN</span></h2>
           </div>
           <p class="aside">Formal foundations, followed by years of building in production.</p>
         </div>
@@ -343,6 +373,221 @@
           </article>
         </div>
       </section>
+
+      <!-- BEYOND THE CODE -->
+      <section class="beyond-code" id="beyond-code">
+
+        <div class="section-heading beyond-heading">
+          <div>
+            <p class="red-kicker">THE STORY CONTINUES</p>
+            <h2>BEYOND <span>THE CODE</span></h2>
+            <p class="beyond-description">
+              Ideas I've shared. Things I've built. Problems I've solved.
+            </p>
+          </div>
+        </div>
+
+        <!-- MEDIUM -->
+        <div class="social-shelf">
+          <div class="social-shelf-heading">
+            <div>
+              <span class="social-index">01 / WRITING</span>
+              <h3>Ideas Worth Reading</h3>
+            </div>
+            <span class="social-platform">MEDIUM</span>
+          </div>
+
+          <div class="social-track">
+
+            <a class="social-card" href="https://medium.com/@shivamv12/the-journey-of-a-web-request-understanding-modern-web-architecture-2c384217423c" target="_blank" rel="noopener noreferrer">
+              <span class="social-card-number">ARTICLE 01</span>
+              <span class="social-card-tag">SYSTEM DESIGN</span>
+              <h4>The Journey of a Web Request</h4>
+              <p>A closer look at what happens behind the scenes in Backend.</p>
+              <span class="social-card-link">READ ARTICLE ↗</span>
+            </a>
+
+            <a class="social-card" href="https://medium.com/@shivamv12/node-js-is-single-threaded-so-how-does-it-handle-concurrency-620e6156ff27" target="_blank" rel="noopener noreferrer">
+              <span class="social-card-number">ARTICLE 02</span>
+              <span class="social-card-tag">NODE.JS</span>
+              <h4>Understanding Node.js "Concurrency"</h4>
+              <p>Node.js achieves high concurrency by keeping JS execution on its main thread.</p>
+              <span class="social-card-link">READ ARTICLE ↗</span>
+            </a>
+
+            <a class="social-card" href="https://medium.com/@shivamv12/prompt-engineering-for-engineers-patterns-that-actually-work-9ee42d30e334" target="_blank" rel="noopener noreferrer">
+              <span class="social-card-number">ARTICLE 03</span>
+              <span class="social-card-tag">GENERATIVE AI</span>
+              <h4>Prompt Engineering</h4>
+              <p>Understanding how to communicate more effectively with LLMs.</p>
+              <span class="social-card-link">READ ARTICLE ↗</span>
+            </a>
+
+            <a class="social-card" href="https://medium.com/@shivamv12/mongodb-and-acid-what-actually-happens-under-the-hood-a874a6ff1b9c" target="_blank" rel="noopener noreferrer">
+              <span class="social-card-number">ARTICLE 04</span>
+              <span class="social-card-tag">DATABASE</span>
+              <h4>How MongoDB achieves ACID?</h4>
+              <p>A glance at Atomicity, Consistency, Isolation and Durability inside MongoDB.</p>
+              <span class="social-card-link">READ ARTICLE ↗</span>
+            </a>
+
+          </div>
+          <a class="social-profile-link" href="https://shivamv12.medium.com/" target="_blank" rel="noopener noreferrer">
+            MORE ON MEDIUM ↗
+          </a>
+        </div>
+
+        <!-- LINKEDIN -->
+        <div class="social-shelf">
+          <div class="social-shelf-heading">
+            <div>
+              <span class="social-index">02 / PERSPECTIVES</span>
+              <h3>Ideas Worth Discussing</h3>
+            </div>
+            <span class="social-platform">LINKEDIN</span>
+          </div>
+
+          <div class="social-track">
+
+            <a class="social-card social-card-linkedin" href="https://lnkd.in/p/gxAnNeYj" target="_blank"
+              rel="noopener noreferrer">
+              <span class="social-card-number">POST 01</span>
+              <span class="social-card-tag">RAG INSPECTOR</span>
+              <h4>Evaluate Retrieval Quality and Diagnose Failures</h4>
+              <p>Inspect embeddings, retrieved chunks, similarity scores, prompts, and answers.</p>
+              <span class="social-card-link">READ POST ↗</span>
+            </a>
+
+            <a class="social-card social-card-linkedin" href="https://lnkd.in/p/gKsUmS7X" target="_blank"
+              rel="noopener noreferrer">
+              <span class="social-card-number">POST 02</span>
+              <span class="social-card-tag">FRONTEND SYSTEM DESIGN</span>
+              <h4>Making Right Decision of Caching Strategy</h4>
+              <p>Explore fan-out on read vs write strategies and when to use each for timeline caching.</p>
+              <span class="social-card-link">READ POST ↗</span>
+            </a>
+
+            <a class="social-card social-card-linkedin" href="https://lnkd.in/p/grrg4HvH" target="_blank"
+              rel="noopener noreferrer">
+              <span class="social-card-number">POST 03</span>
+              <span class="social-card-tag">BUILDING & LEARNING</span>
+              <h4>NeuraLens - A React Native App</h4>
+              <p>Exploring AI-powered image analysis through a mobile application.</p>
+              <span class="social-card-link">READ POST ↗</span>
+            </a>
+
+            <a class="social-card social-card-linkedin" href="https://www.linkedin.com/posts/shivamv1996_softwareengineering-backend-http-share-7479206158059065344-d7Qi/?utm_source=share&utm_medium=member_desktop&rcm=ACoAACO6JVQB3vYG82jnyxzv47iQycR6nWqxz1w" target="_blank"
+              rel="noopener noreferrer">
+              <span class="social-card-number">POST 04</span>
+              <span class="social-card-tag">HTTP QUERY METHOD</span>
+              <h4>Introducing HTTP QUERY: Beyond GET and POST</h4>
+              <p>Explore the new QUERY method for retrieving resources using complex query expressions.</p>
+              <span class="social-card-link">READ POST ↗</span>
+            </a>
+
+          </div>
+
+          <a class="social-profile-link" href="https://linkedin.com/in/shivam1996" target="_blank"
+            rel="noopener noreferrer">
+            MORE ON LINKEDIN ↗
+          </a>
+        </div>
+
+        <!-- GITHUB -->
+        <div class="social-shelf">
+          <div class="social-shelf-heading">
+            <div>
+              <span class="social-index">03 / OPEN SOURCE</span>
+              <h3>Things I've Built</h3>
+            </div>
+            <span class="social-platform">GITHUB ↗</span>
+          </div>
+
+          <div class="social-track">
+
+            <a class="social-card social-card-github" href="YOUR_GITHUB_REPO_URL_1" target="_blank"
+              rel="noopener noreferrer">
+              <span class="social-card-number">REPOSITORY 01</span>
+              <span class="social-card-tag">REACT NATIVE · EXPO</span>
+              <h4>NeuraLens</h4>
+              <p>An AI-powered image analyzer built with React Native and Expo.</p>
+              <span class="social-card-link">VIEW REPOSITORY ↗</span>
+            </a>
+
+            <a class="social-card social-card-github" href="YOUR_GITHUB_REPO_URL_2" target="_blank"
+              rel="noopener noreferrer">
+              <span class="social-card-number">REPOSITORY 02</span>
+              <span class="social-card-tag">NEXT.JS</span>
+              <h4>Bubble Home Boutique</h4>
+              <p>A modern web experience built with Next.js and Tailwind CSS.</p>
+              <span class="social-card-link">VIEW REPOSITORY ↗</span>
+            </a>
+
+            <a class="social-card social-card-github" href="YOUR_GITHUB_REPO_URL_3" target="_blank"
+              rel="noopener noreferrer">
+              <span class="social-card-number">REPOSITORY 03</span>
+              <span class="social-card-tag">JAVASCRIPT</span>
+              <h4>Your Featured Project</h4>
+              <p>Add a short description of another project worth showcasing.</p>
+              <span class="social-card-link">VIEW REPOSITORY ↗</span>
+            </a>
+
+          </div>
+
+          <a class="social-profile-link" href="https://github.com/shivamv12" target="_blank" rel="noopener noreferrer">
+            MORE ON GITHUB ↗
+          </a>
+        </div>
+
+        <!-- STACK OVERFLOW -->
+        <div class="social-shelf">
+          <div class="social-shelf-heading">
+            <div>
+              <span class="social-index">04 / PROBLEM SOLVING</span>
+              <h3>Problems Worth Solving</h3>
+            </div>
+            <span class="social-platform">STACK OVERFLOW ↗</span>
+          </div>
+
+          <div class="social-track">
+
+            <a class="social-card social-card-stack" href="YOUR_STACKOVERFLOW_ANSWER_URL_1" target="_blank"
+              rel="noopener noreferrer">
+              <span class="social-card-number">ANSWER 01</span>
+              <span class="social-card-tag">JAVASCRIPT</span>
+              <h4>Your Featured Answer</h4>
+              <p>Describe the technical problem and the approach used to solve it.</p>
+              <span class="social-card-link">VIEW ANSWER ↗</span>
+            </a>
+
+            <a class="social-card social-card-stack" href="YOUR_STACKOVERFLOW_ANSWER_URL_2" target="_blank"
+              rel="noopener noreferrer">
+              <span class="social-card-number">ANSWER 02</span>
+              <span class="social-card-tag">REACT</span>
+              <h4>Your Featured Answer</h4>
+              <p>Highlight a useful solution to a React development problem.</p>
+              <span class="social-card-link">VIEW ANSWER ↗</span>
+            </a>
+
+            <a class="social-card social-card-stack" href="YOUR_STACKOVERFLOW_ANSWER_URL_3" target="_blank"
+              rel="noopener noreferrer">
+              <span class="social-card-number">ANSWER 03</span>
+              <span class="social-card-tag">NODE.JS</span>
+              <h4>Your Featured Answer</h4>
+              <p>Showcase a practical backend solution or debugging insight.</p>
+              <span class="social-card-link">VIEW ANSWER ↗</span>
+            </a>
+
+          </div>
+
+          <a class="social-profile-link" href="https://stackoverflow.com/users/9246940/shivam-verma" target="_blank"
+            rel="noopener noreferrer">
+            MORE ON STACK OVERFLOW ↗
+          </a>
+        </div>
+
+      </section>
+      <!-- END BEYOND THE CODE -->
 
       <section class="finale" id="finale">
         <p class="red-kicker">UNTIL NEXT TIME</p>

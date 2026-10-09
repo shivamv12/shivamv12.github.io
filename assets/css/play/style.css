@@ -1753,3 +1753,446 @@ button:focus-visible {
     opacity: 1 !important;
   }
 }
+
+/* =========================================
+   BEYOND THE CODE
+========================================= */
+
+.beyond-code {
+  position: relative;
+  padding: 90px 5.5% 100px;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 95% 5%,
+      rgba(30, 64, 175, 0.09),
+      transparent 35%),
+    linear-gradient(180deg, #080910 0%, #0a0b12 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.beyond-heading {
+  margin-bottom: 65px;
+}
+
+.beyond-heading h2 {
+  margin: 8px 0 12px;
+}
+
+.beyond-heading h2 span {
+  color: #e50914;
+}
+
+.beyond-description {
+  color: #a1a1aa;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  line-height: 1.7;
+}
+
+.social-shelf {
+  margin-bottom: 65px;
+}
+
+.social-shelf:last-child {
+  margin-bottom: 0;
+}
+
+.social-shelf-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 22px;
+}
+
+.social-index {
+  display: block;
+  margin-bottom: 8px;
+  color: #e50914;
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+}
+
+.social-shelf-heading h3 {
+  margin: 0;
+  color: #f4f4f5;
+  font-size: clamp(22px, 2.4vw, 32px);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+}
+
+.social-platform {
+  flex-shrink: 0;
+  color: #8c8c98;
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+}
+
+.social-track {
+  display: grid;
+  grid-auto-columns: minmax(240px, 1fr);
+  grid-auto-flow: column;
+  gap: 16px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 8px 3px 20px;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #393943 transparent;
+}
+
+.social-track::-webkit-scrollbar {
+  height: 4px;
+}
+
+.social-track::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.social-track::-webkit-scrollbar-thumb {
+  background: #393943;
+  border-radius: 10px;
+}
+
+.social-card {
+  position: relative;
+  display: flex;
+  min-height: 245px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+  overflow: hidden;
+  color: inherit;
+  text-decoration: none;
+  background:
+    linear-gradient(145deg,
+      rgba(255, 255, 255, 0.045),
+      rgba(255, 255, 255, 0.012)),
+    #11121b;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 5px;
+  scroll-snap-align: start;
+  transition:
+    transform 250ms ease,
+    border-color 250ms ease,
+    background 250ms ease,
+    box-shadow 250ms ease;
+}
+
+.social-card::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #e50914;
+  content: "";
+  transition: width 300ms ease;
+}
+
+.social-card:hover {
+  z-index: 2;
+  transform: translateY(-5px);
+  border-color: rgba(229, 9, 20, 0.55);
+  background: #151620;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.24);
+}
+
+.social-card:hover::before {
+  width: 100%;
+}
+
+.social-card-number {
+  color: #737381;
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+}
+
+.social-card-tag {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 5px 8px;
+  color: #ff6970;
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  background: rgba(229, 9, 20, 0.09);
+  border: 1px solid rgba(229, 9, 20, 0.22);
+  border-radius: 2px;
+}
+
+.social-card h4 {
+  margin: 16px 0 9px;
+  color: #f4f4f5;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.025em;
+}
+
+.social-card p {
+  margin: 0 0 25px;
+  color: #a1a1aa;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.social-card-link {
+  margin-top: auto;
+  color: #f87178;
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 0.09em;
+  transition: color 200ms ease;
+}
+
+.social-card:hover .social-card-link {
+  color: #ffffff;
+}
+
+.social-card-linkedin:hover {
+  border-color: rgba(96, 165, 250, 0.6);
+}
+
+.social-card-linkedin .social-card-tag {
+  color: #93c5fd;
+  background: rgba(59, 130, 246, 0.08);
+  border-color: rgba(96, 165, 250, 0.2);
+}
+
+.social-card-github:hover {
+  border-color: rgba(167, 139, 250, 0.6);
+}
+
+.social-card-github .social-card-tag {
+  color: #c4b5fd;
+  background: rgba(139, 92, 246, 0.08);
+  border-color: rgba(167, 139, 250, 0.2);
+}
+
+.social-card-stack:hover {
+  border-color: rgba(251, 146, 60, 0.6);
+}
+
+.social-card-stack .social-card-tag {
+  color: #fdba74;
+  background: rgba(249, 115, 22, 0.08);
+  border-color: rgba(251, 146, 60, 0.2);
+}
+
+.social-profile-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: #a1a1aa;
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  transition: color 200ms ease;
+}
+
+.social-profile-link:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .beyond-code {
+    padding: 65px 5% 75px;
+  }
+
+  .beyond-heading {
+    margin-bottom: 45px;
+  }
+
+  .social-shelf {
+    margin-bottom: 48px;
+  }
+
+  .social-shelf-heading {
+    align-items: flex-start;
+  }
+
+  .social-shelf-heading h3 {
+    font-size: 23px;
+  }
+
+  .social-platform {
+    padding-top: 4px;
+    font-size: 8px;
+  }
+
+  .social-track {
+    grid-auto-columns: minmax(235px, 78%);
+    gap: 12px;
+  }
+
+  .social-card {
+    min-height: 230px;
+    padding: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .social-track {
+    scroll-behavior: auto;
+  }
+
+  .social-card,
+  .social-card::before,
+  .social-card-link,
+  .social-profile-link {
+    transition: none;
+  }
+}
+
+/* Consistent two-tone section headings */
+.section-heading h2,
+.beyond-heading h2 {
+  color: #f4f4f5;
+}
+
+.section-heading h2 span,
+.beyond-heading h2 span {
+  color: #e50914;
+}
+
+/* =========================================
+   EPISODES — HORIZONTAL SCROLL
+========================================= */
+
+#series .episodes {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: none;
+  grid-auto-columns: calc((100% - 33px) / 4);
+  gap: 11px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  padding: 8px 3px 18px;
+
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #393943 transparent;
+}
+
+/* Keep each episode in a single horizontal row */
+#series .episode {
+  min-width: 0;
+  scroll-snap-align: start;
+}
+
+/* Scrollbar styling */
+#series .episodes::-webkit-scrollbar {
+  height: 4px;
+}
+
+#series .episodes::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#series .episodes::-webkit-scrollbar-thumb {
+  background: #393943;
+  border-radius: 10px;
+}
+
+/* Tablet: show approximately 3 cards */
+@media (max-width: 900px) {
+  #series .episodes {
+    grid-auto-columns: calc((100% - 22px) / 3);
+    gap: 11px;
+  }
+}
+
+/* Mobile: show one full card and part of the next */
+@media (max-width: 620px) {
+  #series .episodes {
+    grid-auto-columns: 78%;
+    gap: 10px;
+  }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  #series .episodes {
+    scroll-behavior: auto;
+  }
+}
+
+/* =========================================
+   EPISODES CAROUSEL — ARROW NAVIGATION
+========================================= */
+
+.episodes-carousel {
+  position: relative;
+}
+
+#series .episodes {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: none;
+  grid-auto-columns: calc((100% - 33px) / 4);
+  gap: 11px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  padding: 8px 3px 18px;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+
+  scrollbar-width: none;
+}
+
+#series .episodes::-webkit-scrollbar {
+  display: none;
+}
+
+#series .episodes .episode {
+  min-width: 0;
+  scroll-snap-align: start;
+}
+
+/* Keep the arrow buttons above the cards */
+.episodes-carousel .arrow {
+  z-index: 5;
+}
+
+.episodes-carousel .arrow.prev {
+  left: -13px;
+}
+
+.episodes-carousel .arrow.next {
+  right: -13px;
+}
+
+/* Tablet: approximately 3 cards visible */
+@media (max-width: 900px) {
+  #series .episodes {
+    grid-auto-columns: calc((100% - 22px) / 3);
+  }
+}
+
+/* Mobile: one card and a preview of the next */
+@media (max-width: 620px) {
+  #series .episodes {
+    grid-auto-columns: 78%;
+    gap: 10px;
+  }
+
+  .episodes-carousel .arrow {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #series .episodes {
+    scroll-behavior: auto;
+  }
+}

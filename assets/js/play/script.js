@@ -240,6 +240,39 @@
     });
   });
 
+  // Episodes carousel arrow navigation
+  document.querySelectorAll(".episodes-carousel").forEach((carousel) => {
+    const track = carousel.querySelector(".episodes");
+    const prev = carousel.querySelector(".arrow.prev");
+    const next = carousel.querySelector(".arrow.next");
+
+    if (!track || !prev || !next) return;
+
+    const scrollAmount = () => {
+      const card = track.querySelector(".episode");
+      if (!card) return card;
+
+      const styles = getComputedStyle(track);
+      const gap = parseFloat(styles.columnGap) || 0;
+
+      return card.getBoundingClientRect().width + gap;
+    };
+
+    prev.addEventListener("click", () => {
+      track.scrollBy({
+        left: -scrollAmount(),
+        behavior: "smooth",
+      });
+    });
+
+    next.addEventListener("click", () => {
+      track.scrollBy({
+        left: scrollAmount(),
+        behavior: "smooth",
+      });
+    });
+  });
+
   // ---------------------------------------------------------
   // REPLAY
   // ---------------------------------------------------------
